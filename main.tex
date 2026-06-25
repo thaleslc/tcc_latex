@@ -927,95 +927,52 @@ No caso dos experimentos realizados neste trabalho, as variáveis rainc e rainnc
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \caption{Configurações principais do arquivo \textit{streams.atmosphere} utilizadas na execução do MPAS.}\label{tab:tabela-04}\\
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textless streams\textgreater{}
-
-\textless immutable\_stream name="input"
-
-type="input"
-
-\textbf{filename\_template="x4.163842\_RS.init.nc"}
-
-input\_interval="initial\_only" /\textgreater{}
-
-\textless immutable\_stream name="restart"
-
-type="input;output"
-
-filename\_template="restart.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"
-
-input\_interval="initial\_only"
-
-output\_interval="1\_00:00:00" /\textgreater{}
-
-\textless stream name="output"
-
-type="output"
-
-filename\_template="history.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"
-
-output\_interval="6:00:00" \textgreater{}
-
-\textless file name="stream\_list.atmosphere.output"/\textgreater{}
-
-\textless/stream\textgreater{}
-
-\textless stream name="diagnostics"
-
-type="output"
-
-filename\_template="diag.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"
-
-output\_interval="3:00:00" \textgreater{}
-
-\textless file name="stream\_list.atmosphere.diagnostics"/\textgreater{}
-
-\textless/stream\textgreater{}
-
-\textless stream name="surface"
-
-type="input"
-
-\textbf{filename\_template="x4.163842.sfc\_update.nc"}
-
-filename\_interval="none"
-
-input\_interval="none" \textgreater{}
-
-\textless file name="stream\_list.atmosphere.surface"/\textgreater{}
-
-\textless/stream\textgreater{}
-
-\textless immutable\_stream name="iau"
-
-type="input"
-
-\textbf{filename\_template="x4.163842.AmB.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"}
-
-filename\_interval="none"
-
-packages="iau"
-
-input\_interval="initial\_only" /\textgreater{}
-
-\textless immutable\_stream name="lbc\_in"
-
-type="input"
-
-filename\_template="lbc.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"
-
-filename\_interval="input\_interval"
-
-packages="limited\_area"
-
-input\_interval="3:00:00" /\textgreater{}
-
-\textless/streams\textgreater{}
-\end{minipage} \\
-\midrule\noalign{}
+\endfirsthead
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+\texttt{\textless streams\textgreater} \\
+\texttt{\textless immutable\_stream name="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="x4.163842\_RS.init.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{input\_interval="initial\_only" /\textgreater} \\[0.6em]
+\texttt{\textless immutable\_stream name="restart"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="input;output"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="restart.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{input\_interval="initial\_only"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{output\_interval="1\_00:00:00" /\textgreater} \\[0.6em]
+\texttt{\textless stream name="output"} \\
+\phantom{\texttt{\textless stream }}\texttt{type="output"} \\
+\phantom{\texttt{\textless stream }}\texttt{filename\_template="history.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"} \\
+\phantom{\texttt{\textless stream }}\texttt{output\_interval="6:00:00" \textgreater} \\[0.6em]
+\texttt{\hspace*{1em}\textless file name="stream\_list.atmosphere.output"/\textgreater} \\
+\texttt{\textless/stream\textgreater} \\[0.6em]
+\texttt{\textless stream name="diagnostics"} \\
+\phantom{\texttt{\textless stream }}\texttt{type="output"} \\
+\phantom{\texttt{\textless stream }}\texttt{filename\_template="diag.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"} \\
+\phantom{\texttt{\textless stream }}\texttt{output\_interval="3:00:00" \textgreater} \\[0.6em]
+\texttt{\hspace*{1em}\textless file name="stream\_list.atmosphere.diagnostics"/\textgreater} \\
+\texttt{\textless/stream\textgreater} \\[0.6em]
+\texttt{\textless stream name="surface"} \\
+\phantom{\texttt{\textless stream }}\texttt{type="input"} \\
+\phantom{\texttt{\textless stream }}\texttt{filename\_template="x4.163842.sfc\_update.nc"} \\
+\phantom{\texttt{\textless stream }}\texttt{filename\_interval="none"} \\
+\phantom{\texttt{\textless stream }}\texttt{input\_interval="none" \textgreater} \\[0.6em]
+\texttt{\hspace*{1em}\textless file name="stream\_list.atmosphere.surface"/\textgreater} \\
+\texttt{\textless/stream\textgreater} \\[0.6em]
+\texttt{\textless immutable\_stream name="iau"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="x4.163842.AmB.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_interval="none"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{packages="iau"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{input\_interval="initial\_only" /\textgreater} \\[0.6em]
+\texttt{\textless immutable\_stream name="lbc\_in"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="lbc.\$Y-\$M-\$D\_\$h.\$m.\$s.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_interval="input\_interval"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{packages="limited\_area"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{input\_interval="3:00:00" /\textgreater} \\[0.6em]
+\texttt{\textless/streams\textgreater} \\
 \end{longtable}
 
 Com os arquivos namelist.atmosphere e streams.atmosphere corretamente configurados, a execução do modelo MPAS é realizada por meio de um comando MPI, que inicializa o modelo utilizando o número de processos previamente definido. Para que a execução seja bem-sucedida, é necessário que o arquivo de particionamento da malha (graph.info) esteja presente e seja compatível com o número de processadores utilizados. O comando para executar, por exemplo, com 48 processadores é:

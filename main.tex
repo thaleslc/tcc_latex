@@ -37,16 +37,16 @@
 
 \begin{titlepage}
 \begin{center}
-\Large{\textsc{\textcolor{red}{Universidade Federal Fluminense}}\\
-\textsc{\textcolor{red}{Escola de Engenharia}}\\
-\textsc{\textcolor{red}{Curso de Graduação em Engenharia de Telecomunicações}}}
+\Large{\textsc{Universidade Federal Fluminense}\\
+\textsc{Escola de Engenharia}\\
+\textsc{Curso de Graduação em Engenharia de Recursos Hídricos e Meio Ambiente}}
 \par\vfill
-\LARGE{\textcolor{red}{Nome do autor}}
+\LARGE{Thales Lessa Costa}
 \par\vfill
-\LARGE{\textcolor{red}{Avaliação do desempenho do MPAS-A na previsão de precipitação extrema no Rio Grande do Sul: estudo do evento de abril-maio de 2024}}
+\LARGE{Avaliação do desempenho do MPAS-A na previsão de precipitação extrema no Rio Grande do Sul: estudo do evento de abril-maio de 2024}
 \par\vfill
-\Large{\textcolor{red}{Niterói -- RJ}\\
-\textcolor{red}{2025}}
+\Large{Niterói -- RJ\\
+2026}
 \end{center}
 \end{titlepage}
 
@@ -981,7 +981,7 @@ Com os arquivos namelist.atmosphere e streams.atmosphere corretamente configurad
 
 \subsubsection{Organização das simulações}
 
-Conforme descrito no tópico 4.3.1, foram realizados dois experimentos neste trabalho, diferenciados exclusivamente pela data da condição inicial atmosférica, correspondentes aos dias 28/04/2024 e 29/04/2024. Para cada experimento, as simulações com o modelo MPAS foram conduzidas utilizando três grades com resoluções espaciais distintas, a saber: 60$\times$60 km, 60$\times$15 km e 60$\times$3 km, totalizando seis simulações numéricas.
+Conforme descrito no tópico 6.2.1, foram realizados dois experimentos neste trabalho, diferenciados exclusivamente pela data da condição inicial atmosférica, correspondentes aos dias 28/04/2024 e 29/04/2024. Para cada experimento, as simulações com o modelo MPAS foram conduzidas utilizando três grades com resoluções espaciais distintas, a saber: 60$\times$60 km, 60$\times$15 km e 60$\times$3 km, totalizando seis simulações numéricas.
 
 Em função das diferentes demandas computacionais associadas a cada resolução espacial (em especial quanto ao consumo de memória RAM) as simulações foram executadas em infraestruturas de hardware distintas. As duas simulações realizadas com a grade de menor resolução espacial (60$\times$60 km), uma para cada experimento, foram executadas em um computador desktop do Laboratório de Monitoramento de Modelagem de Sistemas Climáticos (LAMMOC) da Universidade Federal Fluminense (UFF). Esse equipamento é composto por 32 GB de memória RAM e um processador Intel i7 de décima segunda geração, com 8 núcleos físicos, sendo utilizado apenas um deles na simulação. Cada uma dessas simulações apresentou um tempo total de execução de aproximadamente 23 horas.
 
@@ -989,7 +989,7 @@ As simulações com resolução intermediária (60$\times$15 km), também uma pa
 
 Por fim, as simulações de maior resolução espacial (60$\times$3 km) foram igualmente realizadas no supercomputador MareNostrum, no BSC. Nesse caso, foram empregados 2.226 processadores, com um total de 8.904 GB de memória RAM utilizados. O tempo total de execução para cada uma dessas simulações foi de aproximadamente 16 minutos.
 
-Os experimentos realizados e suas principais características, incluindo datas de inicialização, resoluções espaciais, infraestrutura computacional utilizada e tempos de execução, encontram-se resumidos na \textcolor{red}{Tabela X}.
+Os experimentos realizados e suas principais características, incluindo datas de inicialização, resoluções espaciais, infraestrutura computacional utilizada e tempos de execução, encontram-se resumidos na Tabela 6.13.
 
 \begin{figure}[H]
 \centering
@@ -1009,9 +1009,9 @@ Em sua forma mais simples, o convert\_mpas pode ser aplicado diretamente a um ú
 Como o processo de interpolação pode ser computacionalmente custoso quando todas as variáveis são incluídas, o convert\_mpas permite restringir o conjunto de campos a serem interpolados. Para isso, pode-se criar um arquivo de texto denominado include\_fields, no qual são listados, linha a linha, os nomes das variáveis de interesse. Quando esse arquivo está presente no diretório de trabalho, apenas os campos especificados são processados, reduzindo significativamente o tempo de execução e o tamanho do arquivo de saída.
 
 Outro aspecto importante do uso do convert\_mpas é a possibilidade de interpolar múltiplos arquivos de saída em uma única execução, consolidando diferentes instantes temporais em um único arquivo latlon.nc. Para esse tipo de operação, o primeiro argumento fornecido ao programa deve ser um arquivo NetCDF que contenha as informações da malha do MPAS (por exemplo, o arquivo static ou init), enquanto os argumentos subsequentes correspondem aos arquivos history ou diag que contêm as variáveis a serem interpoladas. O comando necessário para sua execução segue o padrão:
-
-\$ ./convert\_mpas caminho1 caminho2
-
+\[
+./convert\_mpas\ caminho1\ caminho2
+\]
 Onde, ``caminho1'' é o caminho para um arquivo com informações da malha (static ou init, por exemplo) e ``caminho2'' é o caminho para os arquivos diag resultantes da simulação.
 
 Adicionalmente, o convert\_mpas possibilita a definição de um domínio geográfico específico para a interpolação, por meio de um arquivo denominado target\_domain. Nesse arquivo, são especificados os limites espaciais da região de interesse e o número de pontos da grade regular de saída. Essa funcionalidade é particularmente útil para análises regionais, pois reduz o volume de dados processados e concentra a interpolação em áreas específicas do domínio global do modelo.

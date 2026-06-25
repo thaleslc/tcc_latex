@@ -715,119 +715,63 @@ As configurações para o arquivo namelist.init\_atmosphere desta etapa estão d
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \caption{Configurações do arquivo \textit{namelist.init\_atmosphere} utilizadas na geração das condições iniciais do MPAS.}\label{tab:tabela-01}\\
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\&nhyd\_model
-
-config\_init\_case = 7
-
-config\_start\_time = \textquotesingle2024-04-28\_01:00:00\textquotesingle{}
-
-config\_stop\_time = \textquotesingle2024-04-28\_01:00:00\textquotesingle{}
-
-config\_theta\_adv\_order = 3
-
-config\_coef\_3rd\_order = 0.25
-
-config\_interface\_projection = \textquotesingle linear\_interpolation\textquotesingle{}
-
-/
-
-\&dimensions
-
-config\_nvertlevels = 55
-
-config\_nsoillevels = 4
-
-config\_nfglevels = 38
-
-config\_nfgsoillevels = 4
-
-/
-
-\&data\_sources
-
-config\_geog\_data\_path = \textquotesingle/home/lammoc/MPAS/MPAS-A/WPS/geog\textquotesingle{}
-
-config\_met\_prefix = \textquotesingle FILE\textquotesingle{}
-
-config\_sfc\_prefix = \textquotesingle SST\textquotesingle{}
-
-config\_fg\_interval = 86400
-
-config\_landuse\_data = \textquotesingle MODIFIED\_IGBP\_MODIS\_NOAH\textquotesingle{}
-
-config\_topo\_data = \textquotesingle GMTED2010\textquotesingle{}
-
-config\_vegfrac\_data = \textquotesingle MODIS\textquotesingle{}
-
-config\_albedo\_data = \textquotesingle MODIS\textquotesingle{}
-
-config\_maxsnowalbedo\_data = \textquotesingle MODIS\textquotesingle{}
-
-config\_supersample\_factor = 3
-
-config\_use\_spechumd = false
-
-/
-
-\&vertical\_grid
-
-config\_ztop = 30000.0
-
-config\_nsmterrain = 1
-
-config\_smooth\_surfaces = true
-
-config\_dzmin = 0.3
-
-config\_nsm = 30
-
-config\_tc\_vertical\_grid = true
-
-config\_blend\_bdy\_terrain = false
-
-/
-
-\&interpolation\_control
-
-config\_extrap\_airtemp = \textquotesingle lapse-rate\textquotesingle{}
-
-/
-
-\&preproc\_stages
-
-config\_static\_interp = false
-
-config\_native\_gwd\_static = false
-
-config\_vertical\_grid = true
-
-config\_met\_interp = true
-
-config\_input\_sst = false
-
-config\_frac\_seaice = false
-
-/
-
-\&io
-
-config\_pio\_num\_iotasks = 0
-
-config\_pio\_stride = 1
-
-/
-
-\&decomposition
-
-config\_block\_decomp\_file\_prefix = \textquotesingle x4.163842.graph.info.part.\textquotesingle{}
-
-/
-\end{minipage} \\
-\midrule\noalign{}
+\endfirsthead
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+\texttt{\&nhyd\_model} \\
+\texttt{\hspace*{1em}config\_init\_case = 7} \\
+\texttt{\hspace*{1em}config\_start\_time = '2024-04-28\_01:00:00'} \\
+\texttt{\hspace*{1em}config\_stop\_time = '2024-04-28\_01:00:00'} \\
+\texttt{\hspace*{1em}config\_theta\_adv\_order = 3} \\
+\texttt{\hspace*{1em}config\_coef\_3rd\_order = 0.25} \\
+\texttt{\hspace*{1em}config\_interface\_projection = 'linear\_interpolation'} \\
+\texttt{/} \\
+\texttt{\&dimensions} \\
+\texttt{\hspace*{1em}config\_nvertlevels = 55} \\
+\texttt{\hspace*{1em}config\_nsoillevels = 4} \\
+\texttt{\hspace*{1em}config\_nfglevels = 38} \\
+\texttt{\hspace*{1em}config\_nfgsoillevels = 4} \\
+\texttt{/} \\
+\texttt{\&data\_sources} \\
+\texttt{\hspace*{1em}config\_geog\_data\_path = '/home/lammoc/MPAS/MPAS-A/WPS/geog'} \\
+\texttt{\hspace*{1em}config\_met\_prefix = 'FILE'} \\
+\texttt{\hspace*{1em}config\_sfc\_prefix = 'SST'} \\
+\texttt{\hspace*{1em}config\_fg\_interval = 86400} \\
+\texttt{\hspace*{1em}config\_landuse\_data = 'MODIFIED\_IGBP\_MODIS\_NOAH'} \\
+\texttt{\hspace*{1em}config\_topo\_data = 'GMTED2010'} \\
+\texttt{\hspace*{1em}config\_vegfrac\_data = 'MODIS'} \\
+\texttt{\hspace*{1em}config\_albedo\_data = 'MODIS'} \\
+\texttt{\hspace*{1em}config\_maxsnowalbedo\_data = 'MODIS'} \\
+\texttt{\hspace*{1em}config\_supersample\_factor = 3} \\
+\texttt{\hspace*{1em}config\_use\_spechumd = false} \\
+\texttt{/} \\
+\texttt{\&vertical\_grid} \\
+\texttt{\hspace*{1em}config\_ztop = 30000.0} \\
+\texttt{\hspace*{1em}config\_nsmterrain = 1} \\
+\texttt{\hspace*{1em}config\_smooth\_surfaces = true} \\
+\texttt{\hspace*{1em}config\_dzmin = 0.3} \\
+\texttt{\hspace*{1em}config\_nsm = 30} \\
+\texttt{\hspace*{1em}config\_tc\_vertical\_grid = true} \\
+\texttt{\hspace*{1em}config\_blend\_bdy\_terrain = false} \\
+\texttt{/} \\
+\texttt{\&interpolation\_control} \\
+\texttt{\hspace*{1em}config\_extrap\_airtemp = 'lapse-rate'} \\
+\texttt{/} \\
+\texttt{\&preproc\_stages} \\
+\texttt{\hspace*{1em}config\_static\_interp = false} \\
+\texttt{\hspace*{1em}config\_native\_gwd\_static = false} \\
+\texttt{\hspace*{1em}config\_vertical\_grid = true} \\
+\texttt{\hspace*{1em}config\_met\_interp = true} \\
+\texttt{\hspace*{1em}config\_input\_sst = false} \\
+\texttt{\hspace*{1em}config\_frac\_seaice = false} \\
+\texttt{/} \\
+\texttt{\&io} \\
+\texttt{\hspace*{1em}config\_pio\_num\_iotasks = 0} \\
+\texttt{\hspace*{1em}config\_pio\_stride = 1} \\
+\texttt{/} \\
+\texttt{\&decomposition} \\
+\texttt{\hspace*{1em}config\_block\_decomp\_file\_prefix = 'x4.163842.graph.info.part.'} \\
 \end{longtable}
 
 Já as configuraçções para o arquivo streams.init\_atmosphere desta etapa estão dispostas na \textcolor{red}{tabela X}. Onde:

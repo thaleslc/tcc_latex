@@ -1,0 +1,38 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Generated deliverables
+main.pdf
+output/
+tmp/
+
+# Local tools and downloaded archives
+pandoc-*/
+pandoc-*.zip
+
+# Local Codex/app state
+.agents/
+.codex/
+
+# Python/editor/cache files
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store

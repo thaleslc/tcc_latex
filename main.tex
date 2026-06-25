@@ -787,33 +787,21 @@ Já as configuraçções para o arquivo streams.init\_atmosphere desta etapa est
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \caption{Configurações do arquivo \textit{streams.init\_atmosphere} utilizadas na geração das condições iniciais do MPAS.}\label{tab:tabela-02}\\
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\textless streams\textgreater{}
-
-\textless immutable\_stream name="input"
-
-type="input"
-
-filename\_template="x4.163842\_RS.static.nc"
-
-input\_interval="initial\_only" /\textgreater{}
-
-\textless immutable\_stream name="output"
-
-type="output"
-
-filename\_template="x4.163842\_RS.init.nc"
-
-packages="initial\_conds"
-
-output\_interval="initial\_only" /\textgreater{}
-
-\textless/streams\textgreater{}
-\end{minipage} \\
-\midrule\noalign{}
+\endfirsthead
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+\texttt{\textless streams\textgreater} \\
+\texttt{\textless immutable\_stream name="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="input"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="x4.163842\_RS.static.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{input\_interval="initial\_only" /\textgreater} \\[0.6em]
+\texttt{\textless immutable\_stream name="output"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{type="output"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{filename\_template="x4.163842\_RS.init.nc"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{packages="initial\_conds"} \\
+\phantom{\texttt{\textless immutable\_stream }}\texttt{output\_interval="initial\_only" /\textgreater} \\[0.6em]
+\texttt{\textless/streams\textgreater} \\
 \end{longtable}
 
 Com todas as configurações devidamente ajustadas, o init\_atmosphere foi executado, realizando a interpolação espacial dos campos atmosféricos do arquivo FILE para a grade não estruturada do MPAS e integrando essas informações aos dados estáticos do domínio (arquivo ``static'').

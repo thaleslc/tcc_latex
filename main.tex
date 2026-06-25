@@ -843,133 +843,71 @@ O arquivo namelist.atmosphere é responsável por controlar os parâmetros funda
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \caption{Configurações principais do arquivo \textit{namelist.atmosphere} utilizadas na execução do MPAS.}\label{tab:tabela-03}\\
 \toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-\&nhyd\_model
-
-config\_time\_integration\_order = 2
-
-\textbf{config\_dt = 90}
-
-config\_start\_time = \textquotesingle2024-04-28\_00:00:00\textquotesingle{}
-
-\textbf{config\_run\_duration = \textquotesingle5\_00:00:00\textquotesingle{}}
-
-config\_split\_dynamics\_transport = true
-
-config\_number\_of\_sub\_steps = 2
-
-config\_dynamics\_split\_steps = 3
-
-config\_horiz\_mixing = \textquotesingle2d\_smagorinsky\textquotesingle{}
-
-config\_visc4\_2dsmag = 0.05
-
-config\_scalar\_advection = true
-
-config\_monotonic = true
-
-config\_coef\_3rd\_order = 0.25
-
-config\_epssm = 0.1
-
-config\_smdiv = 0.1
-
-\textbf{config\_len\_disp = 15000.0}
-
-/
-
-\&damping
-
-config\_zd = 22000.0
-
-config\_xnutr = 0.2
-
-/
-
-\&limited\_area
-
-config\_apply\_lbcs = false
-
-/
-
-\&io
-
-config\_pio\_num\_iotasks = 0
-
-config\_pio\_stride = 1
-
-/
-
-\&decomposition
-
-\textbf{config\_block\_decomp\_file\_prefix = \textquotesingle x4.163842.graph.info.part.\textquotesingle{}}
-
-/
-
-\&restart
-
-config\_do\_restart = false
-
-/
-
-\&printout
-
-config\_print\_global\_minmax\_vel = true
-
-config\_print\_detailed\_minmax\_vel = false
-
-/
-
-\&IAU
-
-config\_IAU\_option = \textquotesingle off\textquotesingle{}
-
-config\_IAU\_window\_length\_s = 21600.
-
-/
-
-\&physics
-
-config\_sst\_update = false
-
-config\_sstdiurn\_update = false
-
-config\_deepsoiltemp\_update = false
-
-config\_radtlw\_interval = \textquotesingle00:30:00\textquotesingle{}
-
-config\_radtsw\_interval = \textquotesingle00:30:00\textquotesingle{}
-
-config\_bucket\_update = \textquotesingle none\textquotesingle{}
-
-\textbf{config\_physics\_suite = \textquotesingle mesoscale\_reference\textquotesingle{}}
-
-/
-
-\&soundings
-
-config\_sounding\_interval = \textquotesingle none\textquotesingle{}
-
-/
-
-\&input
-
-config\_original\_latitude\_degrees = 0
-
-config\_original\_longitude\_degrees = 0
-
-config\_new\_latitude\_degrees = 40.4
-
-config\_new\_longitude\_degrees = -3.7
-
-config\_birdseye\_rotation\_counter\_clockwise\_degrees = 0
-
-/
-\end{minipage} \\
-\midrule\noalign{}
+\endfirsthead
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
+\texttt{\&nhyd\_model} \\
+\texttt{\hspace*{1em}config\_time\_integration\_order = 2} \\
+\texttt{\hspace*{1em}config\_dt = 90} \\
+\texttt{\hspace*{1em}config\_start\_time = '2024-04-28\_00:00:00'} \\
+\texttt{\hspace*{1em}config\_run\_duration = '5\_00:00:00'} \\
+\texttt{\hspace*{1em}config\_split\_dynamics\_transport = true} \\
+\texttt{\hspace*{1em}config\_number\_of\_sub\_steps = 2} \\
+\texttt{\hspace*{1em}config\_dynamics\_split\_steps = 3} \\
+\texttt{\hspace*{1em}config\_horiz\_mixing = '2d\_smagorinsky'} \\
+\texttt{\hspace*{1em}config\_visc4\_2dsmag = 0.05} \\
+\texttt{\hspace*{1em}config\_scalar\_advection = true} \\
+\texttt{\hspace*{1em}config\_monotonic = true} \\
+\texttt{\hspace*{1em}config\_coef\_3rd\_order = 0.25} \\
+\texttt{\hspace*{1em}config\_epssm = 0.1} \\
+\texttt{\hspace*{1em}config\_smdiv = 0.1} \\
+\texttt{\hspace*{1em}config\_len\_disp = 15000.0} \\
+\texttt{/} \\
+\texttt{\&damping} \\
+\texttt{\hspace*{1em}config\_zd = 22000.0} \\
+\texttt{\hspace*{1em}config\_xnutr = 0.2} \\
+\texttt{/} \\
+\texttt{\&limited\_area} \\
+\texttt{\hspace*{1em}config\_apply\_lbcs = false} \\
+\texttt{/} \\
+\texttt{\&io} \\
+\texttt{\hspace*{1em}config\_pio\_num\_iotasks = 0} \\
+\texttt{\hspace*{1em}config\_pio\_stride = 1} \\
+\texttt{/} \\
+\texttt{\&decomposition} \\
+\texttt{\hspace*{1em}config\_block\_decomp\_file\_prefix = 'x4.163842.graph.info.part.'} \\
+\texttt{/} \\
+\texttt{\&restart} \\
+\texttt{\hspace*{1em}config\_do\_restart = false} \\
+\texttt{/} \\
+\texttt{\&printout} \\
+\texttt{\hspace*{1em}config\_print\_global\_minmax\_vel = true} \\
+\texttt{\hspace*{1em}config\_print\_detailed\_minmax\_vel = false} \\
+\texttt{/} \\
+\texttt{\&IAU} \\
+\texttt{\hspace*{1em}config\_IAU\_option = 'off'} \\
+\texttt{\hspace*{1em}config\_IAU\_window\_length\_s = 21600.} \\
+\texttt{/} \\
+\texttt{\&physics} \\
+\texttt{\hspace*{1em}config\_sst\_update = false} \\
+\texttt{\hspace*{1em}config\_sstdiurn\_update = false} \\
+\texttt{\hspace*{1em}config\_deepsoiltemp\_update = false} \\
+\texttt{\hspace*{1em}config\_radtlw\_interval = '00:30:00'} \\
+\texttt{\hspace*{1em}config\_radtsw\_interval = '00:30:00'} \\
+\texttt{\hspace*{1em}config\_bucket\_update = 'none'} \\
+\texttt{\hspace*{1em}config\_physics\_suite = 'mesoscale\_reference'} \\
+\texttt{/} \\
+\texttt{\&soundings} \\
+\texttt{\hspace*{1em}config\_sounding\_interval = 'none'} \\
+\texttt{/} \\
+\texttt{\&input} \\
+\texttt{\hspace*{1em}config\_original\_latitude\_degrees = 0} \\
+\texttt{\hspace*{1em}config\_original\_longitude\_degrees = 0} \\
+\texttt{\hspace*{1em}config\_new\_latitude\_degrees = 40.4} \\
+\texttt{\hspace*{1em}config\_new\_longitude\_degrees = -3.7} \\
+\texttt{\hspace*{1em}config\_birdseye\_rotation\_counter\_clockwise\_degrees = 0} \\
+\texttt{/} \\
 \end{longtable}
 
 O controle dos arquivos de entrada e saída de dados da simulação é realizado pelo arquivo streams.atmosphere por meio de ``streams'' que são denotadas por ``\textless\textgreater'', de acordo com o apresentado na \textcolor{red}{tabela x}, onde:

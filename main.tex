@@ -818,10 +818,13 @@ O arquivo namelist.atmosphere é responsável por controlar os parâmetros funda
 \item
   \textbf{config\_start\_time:} Define a data e a hora de início da simulação, correspondendo ao instante da condição inicial atmosférica fornecida ao modelo, no formato YYYY-MM-DD\_HH:MN:SS.
 \item
-  \textbf{config\_dt:} Define o passo de tempo da simulação, que corresponde ao intervalo temporal entre sucessivas integrações do estado atmosférico e é expresso em segundos. Esse parâmetro deve ser definido em função da escala espacial característica da malha, associada ao comprimento típico das células de maior resolução, de modo a garantir a estabilidade numérica do modelo durante a integração. Para este estudo, foi calculado de acordo com a \textcolor{red}{equação x}, onde o comprimento característico da malha é ditado pelo espaçamento (em km) entre seus pixels de menor resolução \textsuperscript{{[}33{]}}.
+  \textbf{config\_dt:} Define o passo de tempo da simulação, que corresponde ao intervalo temporal entre sucessivas integrações do estado atmosférico e é expresso em segundos. Esse parâmetro deve ser definido em função da escala espacial característica da malha, associada ao comprimento típico das células de maior resolução, de modo a garantir a estabilidade numérica do modelo durante a integração. Para este estudo, foi calculado de acordo com a Equação~\ref{eq:passo-tempo-mpas}, onde o comprimento característico da malha é ditado pelo espaçamento (em km) entre seus pixels de menor resolução \textsuperscript{{[}33{]}}.
 \end{itemize}
 
-\[\Delta t = 6\, \ast \,(comprimento\, característico\, da\, malha)\]
+\begin{equation}
+\label{eq:passo-tempo-mpas}
+\Delta t = 6 \ast \left(\text{comprimento característico da malha}\right)
+\end{equation}
 
 \begin{itemize}
 \item

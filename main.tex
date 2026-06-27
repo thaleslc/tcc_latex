@@ -39,7 +39,7 @@
 \begin{center}
 \Large{\textsc{Universidade Federal Fluminense}\\
 \textsc{Escola de Engenharia}\\
-\textsc{Curso de Graduação em Engenharia de Recursos Hídricos e Meio Ambiente}}
+\textsc{Curso de Graduação em Engenharia de Recursos Hídricos e do Meio Ambiente}}
 \par\vfill
 \LARGE{Thales Lessa Costa}
 \par\vfill
@@ -61,20 +61,20 @@ Avaliação do desempenho do MPAS-A na previsão de precipitação extrema no Ri
 
 \begin{flushright}
 \begin{minipage}{0.55\textwidth}
-Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Engenharia de Recursos Hídricos e Meio Ambiente da Universidade Federal Fluminense, como requisito parcial para obtenção do grau de Engenheiro de Recursos Hídricos e Meio Ambiente.
+Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Engenharia de Recursos Hídricos e do Meio Ambiente da Universidade Federal Fluminense, como requisito parcial para obtenção do grau de Bacharel em Engenharia de Recursos Hídricos e do Meio Ambiente.
 \end{minipage}
 \end{flushright}
 
 \vspace{3cm}
 
-Orientador: Prof. Dr. Marcio Cataldi
+Orientador: Marcio Cataldi
 
 
 \vfill
 
 Niterói -- RJ
 
-2025
+2026
 \end{center}
 \pagebreak
 
@@ -100,7 +100,7 @@ Avaliação do desempenho do MPAS-A na previsão de precipitação extrema no Ri
 \vspace{1cm}
 \begin{flushright}
 \begin{minipage}{0.55\textwidth}
-Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Engenharia de Recursos Hídricos e Meio Ambiente da Universidade Federal Fluminense, como requisito parcial para obtenção do grau de Engenheiro de Recursos Hídricos e Meio Ambiente.
+Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em Engenharia de Recursos Hídricos e do Meio Ambiente da Universidade Federal Fluminense, como requisito parcial para obtenção do grau de Bacharel em Engenharia de Recursos Hídricos e do Meio Ambiente.
 \end{minipage}
 \end{flushright}
 
@@ -112,21 +112,49 @@ Aprovado em \textcolor{red}{dia} de \textcolor{red}{mês} de \textcolor{red}{ano
 BANCA EXAMINADORA
 \vfill
 \hrulefill\\
-\textcolor{red}{Prof. Dr. Nome completo do orientador - Orientador}\\
-\textcolor{red}{Universidade Federal Fluminense - UFF}
+Marcio Cataldi - Orientador\\
+DSc - UFF
 \vfill
 \hrulefill\\
-\textcolor{red}{Prof. Dr. Nome completo do membro da banca}\\
-\textcolor{red}{Instituição}
+Reginaldo Ventura de Sá\\
+DSc - UERJ
 \vfill
 \hrulefill\\
-\textcolor{red}{Prof. Dr. Nome completo do membro da banca}\\
-\textcolor{red}{Instituição}
+Monique de Faria Marins\\
+DSc - UFF
 \vfill
-\textcolor{red}{Niterói -- RJ}\\
-\textcolor{red}{2025}
+\hrulefill\\
+Franciele Zanandrea\\
+DSc - UFF
+\vfill
+Niterói -- RJ\\
+2026
 \end{center}
-\pagebreak
+\clearpage
+
+\chapter*{Agradecimentos}
+\addcontentsline{toc}{chapter}{Agradecimentos}
+Agradeço, em primeiro lugar, à minha mãe, a quem tudo devo. Nada do que alcancei até aqui seria possível sem o seu apoio, seu cuidado e os valores que me ensinou ao longo da vida.
+
+Agradeço também ao meu orientador, professor Marcio Cataldi, por toda a orientação, paciência e disponibilidade ao longo deste trabalho. Além de ser uma referência e inspiração profissional, mostrou-me, na prática, o que significa ser professor, bem como a generosidade, paciência e compreensão que são essenciais à arte de ensinar. Sua confiança e seus direcionamentos foram fundamentais para a realização deste TCC.
+
+A ambos, deixo meu mais sincero agradecimento.
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{flushright}
+\begin{minipage}{0.68\textwidth}
+\raggedleft
+\textit{"When the last tree is cut, the last fish is caught, and the last river is polluted; when to breathe the air is sickening, you will realize, too late, that wealth is not in bank accounts and that you can’t eat money."}\footnotemark
+
+\medskip
+
+Alanis Obomsawin (1972)
+\end{minipage}
+\end{flushright}
+\footnotetext{Conforme citado em "Conversations with North American Indians", de Ted Poole, em \textit{Who is the Chairman of This Meeting?: A Collection of Essays} (1972), organizado por Ralph Osborne, p. 43. Tradução: "Quando a última árvore for cortada, o último peixe for pescado e o último rio for poluído; quando respirar o ar for nocivo, você perceberá, tarde demais, que a riqueza não está em contas bancárias e que não se pode comer dinheiro."}
+\clearpage
 
 \chapter*{Resumo}
 \addcontentsline{toc}{chapter}{Resumo}
@@ -142,10 +170,6 @@ This study evaluates the performance of MPAS-A in representing the precipitation
 \bigskip
 \noindent Keywords: numerical weather prediction; extreme precipitation; MPAS; ETA; BRAMS; Rio Grande do Sul.
 
-\chapter*{Agradecimentos}
-\addcontentsline{toc}{chapter}{Agradecimentos}
-\textcolor{red}{Inserir agradecimentos.}
-
 \listoffigures
 \addcontentsline{toc}{chapter}{Lista de Figuras}
 
@@ -160,15 +184,15 @@ This study evaluates the performance of MPAS-A in representing the precipitation
 
 \section{Mudanças Climáticas e Eventos Extremos}
 
-O clima é geralmente definido como o comportamento estatístico (em termos da média e variabilidade) de variáveis meteorológicas relevantes de uma região específica ao longo de um período predeterminado. Incluindo também análise de padrões espaciais, tendências de longo prazo, análises de probabilidade dos eventos extremos relacionados e investigação dos processos que causam esse comportamento. Tal abordagem permite identificar os ciclos presentes nesse recorte de espaço e tempo, estabelecendo assim um comportamento ``normal'' para a área analisada, mesmo em relação a seus eventos extremos (IPCC, 2021). Sendo 30 anos o período indicado de comparação dessas variáveis, conforme definido pela Organização Meteorológica Mundial (Zhai et al., 2005).
+O clima é geralmente definido como o comportamento estatístico (em termos da média e variabilidade) de variáveis meteorológicas relevantes de uma região específica ao longo de um período predeterminado, incluindo também análise de padrões espaciais, tendências de longo prazo, análises de probabilidade dos eventos extremos relacionados e investigação dos processos que causam esse comportamento. Tal abordagem permite identificar os ciclos presentes nesse recorte de espaço e tempo, estabelecendo assim um comportamento ``normal'' para a área analisada, mesmo em relação a seus eventos extremos (IPCC, 2021). Sendo 30 anos o período indicado de comparação dessas variáveis, conforme definido pela Organização Meteorológica Mundial (Zhai et al., 2005).
 
-O Painel do IPCC (2021) define que as mudanças climáticas consistem em alterações no estado do clima que podem ser identificadas por mudanças na média e/ou na variabilidade de suas propriedades e que persistem por prolongado período, tipicamente de 10 anos ou mais. Essas mudanças podem provir de processos internos naturais (interações oçeano-atmosfera, derivas continentais, influência das marés, etc), de forçantes externas também naturais (atividade vulcânica, ciclos solares, mudanças orbitais, etc) ou de forçantes antrópicas que alteram a composição da atmosfera ou o uso e cobertura do solo (Burroughs, 2007; Zhai et al., 2005)
+O Painel do IPCC (2021) define que as mudanças climáticas consistem em alterações no estado do clima que podem ser identificadas por mudanças na média e/ou na variabilidade de suas propriedades e que persistem por prolongado período, tipicamente de 10 anos ou mais. Essas mudanças podem provir de processos internos naturais (interações oceano-atmosfera, derivas continentais, influência das marés, etc), de forçantes externas também naturais (atividade vulcânica, ciclos solares, mudanças orbitais, etc) ou de forçantes antrópicas que alteram a composição da atmosfera ou o uso e cobertura do solo (Burroughs, 2007; Zhai et al., 2005).
 
-Cada vez mais se torna inequívoco o papel central que a influência humana tem exercido principalmente no aquecimento do sistema terrestre. A escala das mudanças que o planeta vem enfrentado, assim como o estado atual do sistema climático são sem precedentes recentes e, tais mudanças, já têm afetado a distribuição e intensidade de eventos meteorológicos extremos (ondas de calor, precipitações intensas, secas, ciclones, etc) em todas as regiões do planeta (IPCC, 2021; Costa et al., 2022; Trenberth et al., 2014).
+Cada vez mais se torna inequívoco o papel central que a influência humana tem exercido principalmente no aquecimento do sistema terrestre. A escala das mudanças que o planeta vem enfrentando, assim como o estado atual do sistema climático são sem precedentes recentes e, tais mudanças, já têm afetado a distribuição e intensidade de eventos meteorológicos extremos (ondas de calor, precipitações intensas, secas, ciclones, etc) em todas as regiões do planeta (IPCC, 2021; Costa et al., 2022; Trenberth et al., 2014).
 
-Tais mudanças nos padrões de eventos extremos resultam em perdas de vidas e estresses em diversos setores da economia, tendo entre 1970 e 2021 resultado em mais de 2 milhões de mortes e 43 bilhões de dólares em perdas econômicas (OMM 2021).
+Eventos meteorológicos, climáticos e hidrológicos extremos têm provocado perdas humanas e impactos econômicos expressivos. Segundo a Organização Meteorológica Mundial, entre 1970 e 2021 foram registrados 11.778 desastres associados a esses eventos, resultando em pouco mais de 2 milhões de mortes e aproximadamente 4,3 trilhões de dólares em perdas econômicas globais (OMM, 2023).
 
-É importante notar que, as regiões historicamente mais afetadas pelas mudanças climáticas, são também as regiões mais vulneráveis a esses eventos (países mais quentes e pobres no geral), o que torna essa dinâmica ainda mais desigual, pois esses mesmos países, além de serem menos preparados para lidar com eventos extremos, são também, em sua maioria, menos poluidores do que nações mais economicamente desenvolvidas.
+É importante notar que as regiões historicamente mais afetadas pelas mudanças climáticas, são também as regiões mais vulneráveis a esses eventos (países mais quentes e pobres no geral), o que torna essa dinâmica ainda mais desigual, pois esses mesmos países, além de serem menos preparados para lidar com eventos extremos, são também, em sua maioria, menos poluidores do que nações mais economicamente desenvolvidas.
 
 Diffenbaugh e Burke (2019) afirmam que, embora a desigualdade mundial tenha decaído ao longo dos últimos 50 anos, existe 90\% de chance de que o aquecimento global nesse período tenha prejudicado a diminuição dessa desigualdade, quando comparado com cenários econômicos sem influência das mudanças provenientes de fontes antropogênicas no clima, o que, unido às previsões mais recentes de intensificação dos efeitos decorrentes das mudanças climáticas, apontam para um cenário alarmante de atraso na diminuição da desigualdade socioeconômica no futuro.
 
@@ -176,55 +200,55 @@ Diffenbaugh e Burke (2019) afirmam que, embora a desigualdade mundial tenha deca
 
 \section{Eventos Extremos no Rio Grande do Sul}
 
-Nesse contexto, o cenário Brasileiro de impactos provenientes das mudanças climáticas não é melhor do que a situação de outros países da América do Sul onde, principalmente nos últimos anos, têm sido mais frequente a ocorrência de eventos extremos, e onde os cenários (RCP4.5 e RCP8.5) das projeções mais recentes apontam que tais eventos serão cada vez mais frequentes. (IPCC, 2021; IPCC ,2022; Costa et al., 2022; Marengo et al., 2009)
+Nesse contexto, o cenário brasileiro de impactos provenientes das mudanças climáticas não é melhor do que a situação de outros países da América do Sul onde, principalmente nos últimos anos, têm sido mais frequente a ocorrência de eventos extremos, e onde os cenários (RCP4.5 e RCP8.5) das projeções mais recentes apontam que tais eventos serão cada vez mais frequentes (IPCC, 2021; IPCC ,2022; Costa et al., 2022; Marengo et al., 2009).
 
 De maneira complementar, Medeiros, Oliveira e Avila-Diaz (2022) observaram que, para os cenários de maiores emissões de gases de efeito estufa nos ensembles do CMIP3, CMIP5 e CMIP6, a região Sul apresentaria aumento na ocorrência de eventos extremos de excesso de chuva, mas com um aumento também no número de dias secos. Isso indica uma maior concentração temporal da chuva, resultando em grandes volumes em curto espaço de tempo, o que tende a elevar o risco de enxurradas.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/8e8716f29a7cc4852853ab4b941f6cec2bce73fa.png}
-\caption{\textcolor{purple}{Resumo esquemático das principais mudanças projetadas nos extremos climáticos de precipitação nas regiões brasileiras. Fonte: Medeiros, Oliveira e Avila-Diaz (2022).}}
+\caption{Resumo esquemático das principais mudanças projetadas nos extremos climáticos de precipitação nas regiões brasileiras. Fonte: Medeiros, Oliveira e Avila-Diaz (2022).}
 \label{fig:figura-02}
 \end{figure}
 
-Nesse contexto de aumento de eventos extremos de precipitação na região Sul do Brasil, o estado do Rio Grande do Sul já vem, durante repetidos anos (2020, 2023, 2024), sofrendo com eventos de excesso de chuvas, desencadeando elevados prejuízos econômicos e sociais. (Porfírio da Rocha, Simões Reboita, Machado Crespo, 2024; Mantovani et al., 2024)
+Nesse contexto de aumento de eventos extremos de precipitação na região Sul do Brasil, o estado do Rio Grande do Sul já vem, durante repetidos anos (2020, 2023, 2024), sofrendo com eventos de excesso de chuvas, desencadeando elevados prejuízos econômicos e sociais (Porfírio da Rocha, Simões Reboita, Machado Crespo, 2024; Mantovani et al., 2024).
 
 \section{Evento extremo de abril-maio de 2024 no Rio Grande do Sul}
 
-Entre 26 de abril e 5 de maio de 2024, o estado do Rio Grande do Sul enfrentou um desastre hidrológico sem precedentes, desencadeado por eventos de precipitação extrema que superaram todos os registros históricos previamente observados. Todas as regiões hidrográficas do estado apresentaram elevados acumulados de chuva ao longo do período, no entretanto, a região hidrográfica do Guaíba concentrou os maiores volumes precipitados. Esse fato, associado à elevada densidade populacional da região (aproximadamente 6,8 milhões de habitantes, em contraste com cerca de 1,8 milhão na região hidrográfica do Uruguai e 1,1 milhão na região Litorânea) contribuiu para a intensificação dos impactos sobre a infraestrutura urbana e a população residente (MARENGO et al., 2024).
+Entre 26 de abril e 5 de maio de 2024, o estado do Rio Grande do Sul enfrentou um desastre hidrológico sem precedentes, desencadeado por eventos de precipitação extrema que superaram todos os registros históricos previamente observados. Todas as regiões hidrográficas do estado apresentaram elevados acumulados de chuva ao longo do período, no entanto, a região hidrográfica do Guaíba concentrou os maiores volumes precipitados. Esse fato, associado à elevada densidade populacional da região (aproximadamente 6,8 milhões de habitantes, em contraste com cerca de 1,8 milhão na região hidrográfica do Uruguai e 1,1 milhão na região Litorânea) contribuiu para a intensificação dos impactos sobre a infraestrutura urbana e a população residente (MARENGO et al., 2024).
 
 A extensão dos impactos refletiu-se diretamente no número e na distribuição das declarações oficiais de anormalidade dos municípios do estado. Até 30 de maio de 2024, 95 municípios decretaram estado de calamidade pública e 323 municípios declararam situação de emergência no estado (RIO GRANDE DO SUL, 2024).
 
-Como pode ser observado na \textcolor{green}{Figura~\ref*{fig:figura-03}}, a maior parte dos municípios que decretaram estado de calamidade pública estão localizados na região hidrográfica do Guaíba, corroborando a concentração espacial dos danos associados ao evento.
+Como pode ser observado na Figura~\ref*{fig:figura-03}, a maior parte dos municípios que decretaram estado de calamidade pública estão localizados na região hidrográfica do Guaíba, corroborando a concentração espacial dos danos associados ao evento.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f9d087db07362eea968d6954aa342574b24ff6c2.png}
-\caption{\textcolor{purple}{Regiões Hidrográficas do Rio Grande do Sul, com destaque para os municípios que decretaram estado de calamidade pública até 30/05/2024. Fonte: Autor.}}
+\caption{Regiões Hidrográficas do Rio Grande do Sul, com destaque para os municípios que decretaram estado de calamidade pública até 30/05/2024. Fonte: Autor.}
 \label{fig:figura-03}
 \end{figure}
 
-No município de Segredo, por exemplo, acumulados chegaram a 812,6 mm em 10 dias, enquanto Fontoura Xavier registrou 778 mm, volumes equivalentes a 280\% acima da média histórica para os meses de abril e maio. Essas precipitações elevaram o nível do Rio Guaíba a 5,35 metros em Porto Alegre \textcolor{green}{(figura~\ref*{fig:figura-04})}, superando o recorde de 1941 (4,76 m) e alagando áreas urbanas de cidades como São Lourenço, Pelotas e Rio Grande, localizadas a mais de 400 km do epicentro das chuvas, além de diversas áreas rurais espalhadas por todo o estado (PORFÍRIO DA ROCHA; SIMÕES REBOITA; MACHADO CRESPO, 2024; FONSECA et al., 2024).
+No município de Segredo, por exemplo, acumulados chegaram a 812,6 mm em 10 dias, enquanto Fontoura Xavier registrou 778 mm, volumes equivalentes a 280\% acima da média histórica para os meses de abril e maio. Essas precipitações elevaram o nível do Rio Guaíba a 5,35 metros em Porto Alegre (figura~\ref*{fig:figura-04}), superando o recorde de 1941 (4,76 m) e alagando áreas urbanas de cidades como São Lourenço, Pelotas e Rio Grande, localizadas a mais de 400 km do epicentro das chuvas, além de diversas áreas rurais espalhadas por todo o estado (PORFÍRIO DA ROCHA; SIMÕES REBOITA; MACHADO CRESPO, 2024; FONSECA et al., 2024).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/a6da75c003b48b87fafd0cd603fbb5e1fe94724e.png}
-\caption{\textcolor{purple}{Evolução do nível do Guaíba no Cais Mauá C6, com destaque para as cotas de referência e para o pico observado durante o evento de maio de 2024. Fonte: Agência Nacional de Águas e Saneamento Básico (2024).}}
+\caption{Evolução do nível do Guaíba no Cais Mauá C6, com destaque para as cotas de referência e para o pico observado durante o evento de maio de 2024. Fonte: Agência Nacional de Águas e Saneamento Básico (2024).}
 \label{fig:figura-04}
 \end{figure}
 
 \subsection{Descrição dos mecanismos do evento}
 
-Em níveis atmosféricos elevados (200 hPa), um anticiclone anômalo sobre o centro-sudeste do Brasil intensificou o jato subtropical \textcolor{green}{(figura~\ref*{fig:figura-05})}, criando divergência de ar que favoreceu a formação de sistemas convectivos, pois a divergência de ar em altos níveis, ao retirar ar da coluna atmosférica, acaba contribuindo para a redução da pressão na superfície, o que, no caso desse evento, ocasionou o levantamento de ar quente e úmido, favorecendo assim a formação de nuvens (ROCHA; REBOITA; CRESPO, 2024).
+Em níveis atmosféricos elevados (200 hPa), um anticiclone anômalo sobre o centro-sudeste do Brasil intensificou o jato subtropical (figura~\ref*{fig:figura-05}), criando divergência de ar que favoreceu a formação de sistemas convectivos, pois a divergência de ar em altos níveis, ao retirar ar da coluna atmosférica, acaba contribuindo para a redução da pressão na superfície, o que, no caso desse evento, ocasionou o levantamento de ar quente e úmido, favorecendo assim a formação de nuvens (ROCHA; REBOITA; CRESPO, 2024).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/9215930ac95cb6eb7be04003f9474dbac6e5963f.png}
-\caption{\textcolor{purple}{Padrões atmosféricos associados ao evento extremo de abril-maio de 2024, incluindo campos de circulação e anomalias relevantes à organização da precipitação. Fonte: Rocha, Reboita e Crespo (2024).}}
+\caption{Padrões atmosféricos associados ao evento extremo de abril-maio de 2024, incluindo campos de circulação e anomalias relevantes à organização da precipitação. Fonte: Rocha, Reboita e Crespo (2024).}
 \label{fig:figura-05}
 \end{figure}
 
-Simultaneamente, em baixos níveis (850 hPa), os ventos de norte/noroeste, fortalecidos pelo acoplamento da alta pressão anômala ao Anticiclone Subtropical do Atlântico Sul \textcolor{green}{figura~\ref*{fig:figura-05}a, setas vermelhas}, transportaram umidade da Amazônia para o Rio Grande do Sul, alimentando de calor e umidade os baixos níveis atmosféricos sobre o Rio Grande do Sul \textcolor{green}{figura~\ref*{fig:figura-05}c, setas pretas}.
+Simultaneamente, em baixos níveis (850 hPa), os ventos de norte/noroeste, fortalecidos pelo acoplamento da alta pressão anômala ao Anticiclone Subtropical do Atlântico Sul (figura~\ref*{fig:figura-05}a), setas vermelhas, transportaram umidade da Amazônia para o Rio Grande do Sul, alimentando de calor e umidade os baixos níveis atmosféricos sobre o Rio Grande do Sul (figura~\ref*{fig:figura-05}c), setas pretas.
 
 Além desses padrões anômalos sobre o continente, duas frentes frias (27-28 de abril e 1\textordmasculine{} de maio) influenciaram o direcionamento do jato de baixos níveis, transportando ar quente e úmido para a região Sul do Brasil. Esse processo contribuiu para a organização das chuvas e atuou como gatilho para o início das precipitações intensas do evento.
 
@@ -232,9 +256,9 @@ A persistência do padrão atmosférico por semanas foi reforçada por uma telec
 
 \subsection{Abrangência e impactos socioeconômicos}
 
-Esse evento afetou cerca de 5,6\% do território gaúcho, com danos significativos em 298 municípios, dos quais 34 tiveram mais de 20\% de suas áreas comprometidas por deslizamentos de terra, enxurradas, inundações e alagamentos. Nas zonas urbanas, 5\% da infraestrutura total foi impactada, com seis municípios registrando mais de 20\% de suas áreas urbanizadas afetadas \textcolor{green}{(figura~\ref*{fig:figura-06})} (MAPBIOMAS, 2024).
+Esse evento afetou cerca de 5,6\% do território gaúcho, com danos significativos em 298 municípios, dos quais 34 tiveram mais de 20\% de suas áreas comprometidas por deslizamentos de terra, enxurradas, inundações e alagamentos. Nas zonas urbanas, 5\% da infraestrutura total foi impactada, com seis municípios registrando mais de 20\% de suas áreas urbanizadas afetadas (figura~\ref*{fig:figura-06}) (MAPBIOMAS, 2024).
 
-A análises por imagens de satélite revelaram que 64,2\% das áreas atingidas eram terrenos agropecuários, como lavouras (39,1\%) e zonas de uso misto (24,2\%), seguidos por formações naturais não florestais, como campos e áreas pantanosas (25,4\%). Florestas e áreas não vegetadas representaram, respectivamente, 8\% e 2,4\% dos impactos \textcolor{green}{tabela da figura~\ref*{fig:figura-06}} (MAPBIOMAS, 2024 e DEFESA CIVIL DO RIO GRANDE DO SUL, 2024).
+As análises por imagens de satélite revelaram que 64,2\% das áreas atingidas eram terrenos agropecuários, como lavouras (39,1\%) e zonas de uso misto (24,2\%), seguidos por formações naturais não florestais, como campos e áreas pantanosas (25,4\%). Florestas e áreas não vegetadas representaram, respectivamente, 8,0\% e 2,4\% dos impactos, conforme a tabela apresentada na Figura~\ref*{fig:figura-06} (MAPBIOMAS, 2024; DEFESA CIVIL DO RIO GRANDE DO SUL, 2024).
 
 \begin{figure}[H]
 \centering
@@ -244,20 +268,20 @@ A análises por imagens de satélite revelaram que 64,2\% das áreas atingidas e
 \begin{minipage}{0.48\linewidth}\centering
 \includegraphics[width=\linewidth,height=0.40\textheight,keepaspectratio]{figuras/0c5e7a5a3517e4f990d1adf62c473805078809db.png}
 \end{minipage}
-\caption{\textcolor{purple}{Distribuição espacial das áreas atingidas e síntese das classes de cobertura e uso do solo afetadas pelo evento de maio de 2024 no Rio Grande do Sul. Fonte: MapBiomas (2024).}}
+\caption{Distribuição espacial das áreas atingidas e síntese das classes de cobertura e uso do solo afetadas pelo evento de maio de 2024 no Rio Grande do Sul. Fonte: MapBiomas (2024).}
 \label{fig:figura-06}
 \end{figure}
 
-Tamanha extensão de área afetada, combinada com a gravidade dos impactos em algumas regiões, resultaram em significativas perdas sociais, com a defesa civil estimando 2,4 milhões de afetados, 572 mil desalojados, 30 mil em abrigos, 31 desaparecidos e 182 mortes confirmadas (DEFESA CIVIL DO RIO GRANDE DO SUL, 2024).
+A grande extensão da área afetada, combinada à gravidade dos impactos em algumas regiões, resultou em perdas sociais significativas. Segundo a Defesa Civil do Rio Grande do Sul, foram registrados cerca de 2,4 milhões de pessoas afetadas, 572 mil desalojadas, 30 mil em abrigos, 31 desaparecidas e 182 mortes confirmadas (DEFESA CIVIL DO RIO GRANDE DO SUL, 2024).
 
 A tragédia no Rio Grande do Sul também causou impactos econômicos significativos em diversos setores estaduais e nacionais. A Confederação Nacional do Comércio de Bens, Serviços e Turismo (2024) estimou que a perda no PIB do estado pode chegar a 9,08\% (R\$ 58,1 bilhões), com efeitos no PIB nacional de -1\% (R\$ 97 bilhões).
 
-O mesmo relatório estimou também a perda de 305 mil empregos no total (195 mil no próprio estado e 110 mil no resto do Brasil). Os impactos discretizados por setor podem ser consultados na \textcolor{green}{figura~\ref*{fig:figura-07}}.
+O mesmo relatório estimou também a perda de 305 mil empregos no total (195 mil no próprio estado e 110 mil no resto do Brasil). Os impactos discretizados por setor podem ser consultados na figura~\ref*{fig:figura-07}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/69f10093c8a36f93a213eef8761133852e758221.png}
-\caption{\textcolor{purple}{Impactos econômicos estimados da catástrofe no Rio Grande do Sul por setor econômico e região de incidência. Fonte: Confederação Nacional do Comércio de Bens, Serviços e Turismo (2024).}}
+\caption{Impactos econômicos estimados da catástrofe no Rio Grande do Sul por setor econômico e região de incidência. Fonte: Confederação Nacional do Comércio de Bens, Serviços e Turismo (2024).}
 \label{fig:figura-07}
 \end{figure}
 
@@ -277,14 +301,14 @@ Nesse sentido, trabalhos como este contribuem para a compreensão das potenciali
 
 \section{Previsão de tempo}
 
-A previsão numérica de tempo baseia-se em modelos atmosféricos que representam, de forma discretizada, a evolução do estado da atmosfera a partir de condições iniciais e de contorno. Em sistemas modernos de previsão numérica, como esquematizado na \textcolor{green}{figura~\ref*{fig:figura-08}}, o núcleo dinâmico calcula a evolução dos movimentos e processos resolvidos na escala da grade, enquanto parametrizações físicas representam processos sub-grade não resolvidos pela malha, como radiação, convecção e trocas turbulentas (Pu \& Kalnay, 2018).
+A previsão numérica de tempo baseia-se em modelos atmosféricos que representam, de forma discretizada, a evolução do estado da atmosfera a partir de condições iniciais e de contorno. Em sistemas modernos de previsão numérica, como esquematizado na figura~\ref*{fig:figura-08}, o núcleo dinâmico calcula a evolução dos movimentos e processos resolvidos na escala da grade, enquanto parametrizações físicas representam processos sub-grade não resolvidos pela malha, como radiação, convecção e trocas turbulentas (Pu \& Kalnay, 2018).
 
 Desta forma, a qualidade da previsão depende tanto da correta assimilação de dados de satélites, estações meteorológicas, aviões, etc, nas condições iniciais e de contorno do modelo, quanto da formulação física (diretamente resolvida ou parametrizada) e computacional do modelo (\href{https://www.ecmwf.int/sites/default/files/elibrary/2015/15259-modelling-infrastructure-integrated-forecasting-system-recent-advances-and-future-challenges.pdf}{Wedi et al., 2015;} Pu \& Kalnay, 2018).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f7093e3c6eafe18ded70062fcb4462a71901142a.png}
-\caption{\textcolor{purple}{Esquema dos processos físicos na atmosfera e suas interações. Os processos dinâmicos em escalas resolvíveis, destacados em negrito, são calculados diretamente pela dinâmica do modelo, enquanto os demais processos sub-grade são parametrizados com base nas variáveis da escala resolvida. Retirado de Pu \& Kalnay, 2018.}}
+\caption{Esquema dos processos físicos na atmosfera e suas interações. Os processos dinâmicos em escalas resolvíveis, destacados em negrito, são calculados diretamente pela dinâmica do modelo, enquanto os demais processos sub-grade são parametrizados com base nas variáveis da escala resolvida. Retirado de Pu \& Kalnay, 2018.}
 \label{fig:figura-08}
 \end{figure}
 
@@ -294,12 +318,12 @@ O Integrated Forecasting System (IFS), do ECMWF, é apresentado como um sistema 
 
 Modelos regionais, por sua vez, são geralmente formulados como modelos de área limitada, aninhados sobre uma região de interesse. Por restringirem o domínio espacial de integração, podem ser executados em resoluções horizontais mais altas que modelos globais, sendo forçados por condições de contorno laterais provenientes desses modelos globais, análises ou reanálises atmosféricas (GIORGI; MEARNS, 1999; DAVIES, 2014).
 
-Essa estratégia, de aninhamento e downscaling dinâmico, permite representar com maior detalhe efeitos de orografia, contraste terra-mar e processos atmosféricos de menor escala, conforme ilustrado esquematicamente na \textcolor{green}{Figura~\ref*{fig:figura-09}}.
+Essa estratégia, de aninhamento e downscaling dinâmico, permite representar com maior detalhe efeitos de orografia, contraste terra-mar e processos atmosféricos de menor escala, conforme ilustrado esquematicamente na Figura~\ref*{fig:figura-09}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/a2bd9fd4c7cdca5b79d47d1ff01a0186f41ee8a7.png}
-\caption{\textcolor{purple}{Representação esquemática do aninhamento de um modelo regional em um modelo global, com aumento da resolução espacial sobre a região de interesse. Fonte: adaptado de Giorgi e Gutowski Jr. (2015).}}
+\caption{Representação esquemática do aninhamento de um modelo regional em um modelo global, com aumento da resolução espacial sobre a região de interesse. Fonte: adaptado de Giorgi e Gutowski Jr. (2015).}
 \label{fig:figura-09}
 \end{figure}
 
@@ -311,7 +335,7 @@ O MPAS, por sua vez, representa uma alternativa à separação clássica entre m
 
 Assim, a previsão de tempo operacional e científica combina modelos globais, que capturam a evolução da circulação atmosférica de grande escala e fornecem orientação de médio prazo, com modelos regionais, que refinam a informação em domínios específicos e buscam representar processos locais com maior detalhe. A escolha entre GFS, ECMWF/IFS, MPAS, Eta, BRAMS ou outro sistema depende então do objetivo da previsão, do domínio espacial, da resolução necessária e da disponibilidade computacional (\href{https://www.ecmwf.int/sites/default/files/elibrary/2015/15259-modelling-infrastructure-integrated-forecasting-system-recent-advances-and-future-challenges.pdf}{Wedi et al., 2015}; \href{https://www.hereon.de/imperia/md/content/gkss/zentrale_einrichtungen/bibliothek/journals/2011/feser_29114.pdf}{Feser et al., 2011}).
 
-\section{ETA}
+\section{Modelo ETA}
 
 O Eta é um modelo atmosférico regional de malha horizontalmente regular, desenvolvido originalmente na Universidade de Belgrado em conjunto com o Instituto de Hidrometeorologia da antiga Iugoslávia e posteriormente operacionalizado no National Centers for Environmental Prediction (NCEP). Sua formulação inicial está associada à coordenada vertical eta e à representação da topografia em degraus, descritas nos trabalhos de Mesinger (1984) e Mesinger et al. (1988) e posteriormente incorporadas à versão operacional do NMC/NCEP apresentada por Black (1994).
 
@@ -324,7 +348,7 @@ A principal característica do Eta é o uso da coordenada vertical \ensuremath{\
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/2d11499d71fc765d49c7143b4b6c54e6bc8a17f3.png}
-\caption{\textcolor{purple}{Representação esquemática das coordenadas verticais eta (\ensuremath{\eta}) e sigma (\ensuremath{\sigma}) em região de topografia acentuada. Fonte: Lyra et al. (2022).}}
+\caption{Representação esquemática das coordenadas verticais eta (\ensuremath{\eta}) e sigma (\ensuremath{\sigma}) em região de topografia acentuada. Fonte: Lyra et al. (2022).}
 \label{fig:figura-10}
 \end{figure}
 
@@ -335,7 +359,7 @@ A integração temporal do Eta utiliza uma formulação do tipo \emph{split-expl
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/fdc85933e293525e3221953d6e5282389620562d.png}
-\caption{\textcolor{purple}{Distribuição horizontal das variáveis na grade E de Arakawa utilizada no Modelo Eta, onde `h' representa a variável de massa e `v' representa as componentes horizontais do vento. Fonte: Lyra et al. (2022).}}
+\caption{Distribuição horizontal das variáveis na grade E de Arakawa utilizada no Modelo Eta, onde `h' representa a variável de massa e `v' representa as componentes horizontais do vento. Fonte: Lyra et al. (2022).}
 \label{fig:figura-11}
 \end{figure}
 
@@ -349,9 +373,9 @@ Em uma avaliação voltada a chuvas intensas, Vieira et al. (2015) analisaram pr
 
 Além da previsão de tempo, o Eta tem sido amplamente empregado como modelo regional climático para a América do Sul. Chou et al. (2005) avaliaram previsões sazonais de precipitação do Eta sobre a América do Sul e mostraram que a habilidade do sistema varia conforme a região, estação e escala temporal avaliada. Pesquero et al. (2010) e Chou et al. (2012) utilizaram o Eta para downscaling climático do clima presente sobre a América do Sul, enquanto Marengo et al. (2012) aplicaram o sistema Eta-CPTEC/HadCM3 para a construção de cenários regionais futuros, com análises para as bacias Amazônica, São Francisco e Paraná. Em conjunto, esses estudos indicam que o Eta é capaz de agregar detalhamento regional às simulações globais, embora ainda apresente vieses regionais de precipitação e temperatura, especialmente em áreas onde a convecção, a topografia e a circulação de grande escala interagem de forma complexa.
 
-A revisão indica que, no geral, o Modelo Eta imlementado no CPTEC apresenta uma formulação adequada à modelagem regional na América do Sul, principalmente pela combinação entre a coordenada eta, representação da topografia e sua aplicação em diferentes escalas temporais. No entanto, os estudos avaliados mostram que esse detalhamento regional não elimina limitações associadas à qualidade das condições iniciais e de contorno, às parametrizações físicas e à resolução espacial adotada. Dessa forma, sua utilização deve ser acompanhada por avaliações específicas para cada região, período e tipo de evento, especialmente em aplicações voltadas à precipitação intensa, nas quais erros de posicionamento, suavização dos máximos e vieses sistemáticos podem afetar a qualidade da previsão.
+A revisão indica que, no geral, o Modelo Eta implementado no CPTEC apresenta uma formulação adequada à modelagem regional na América do Sul, principalmente pela combinação entre a coordenada eta, representação da topografia e sua aplicação em diferentes escalas temporais. No entanto, os estudos avaliados mostram que esse detalhamento regional não elimina limitações associadas à qualidade das condições iniciais e de contorno, às parametrizações físicas e à resolução espacial adotada. Dessa forma, sua utilização deve ser acompanhada por avaliações específicas para cada região, período e tipo de evento, especialmente em aplicações voltadas à precipitação intensa, nas quais erros de posicionamento, suavização dos máximos e vieses sistemáticos podem afetar a qualidade da previsão.
 
-\section{BRAMS}
+\section{Modelo BRAMS (Brazilian developments on the Regional Atmospheric Modeling System)}
 
 O BRAMS (\emph{Brazilian developments on the Regional Atmospheric Modeling System}) é um modelo atmosférico regional de malha horizontalmente regular, derivado do RAMS (\emph{Regional Atmospheric Modeling System}), desenvolvido originalmente na Colorado State University para simular circulações atmosféricas em múltiplas escalas (Pielke et al., 1992; Cotton et al., 2003). No Brasil, o desenvolvimento do BRAMS foi iniciado por um consórcio envolvendo a ATMET, o IME/USP, o IAG/USP e o CPTEC/INPE, com financiamento da FINEP, com o objetivo de adaptar o RAMS às necessidades de previsão e pesquisa em regiões tropicais e subtropicais (Freitas et al., 2017).
 
@@ -364,7 +388,7 @@ O modelo utiliza grade C de Arakawa na horizontal e grade de Lorenz na vertical,
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/e2fd150cd1c5e96f066d877acb9e8fec103fa0e5.png}
-\caption{\textcolor{purple}{Esquema conceitual dos processos físicos e químicos representados no BRAMS 5.2, incluindo transporte convectivo, química atmosférica, elevação de plumas, deposição seca e úmida e interação com a superfície. Fonte: Freitas et al. (2016).}}
+\caption{Esquema conceitual dos processos físicos e químicos representados no BRAMS 5.2, incluindo transporte convectivo, química atmosférica, elevação de plumas, deposição seca e úmida e interação com a superfície. Fonte: Freitas et al. (2016).}
 \label{fig:figura-12}
 \end{figure}
 
@@ -376,7 +400,7 @@ No quesito desempenho, diferentes avaliações indicam que a habilidade do BRAMS
 
 Ao longo das últimas duas décadas, o BRAMS se consolidou como um sistema regional de previsão e pesquisa voltado a aplicações meteorológicas e ambientais, especialmente na América do Sul. Sua evolução a partir do RAMS permitiu incorporar processos relevantes para regiões tropicais e subtropicais, mas seu desempenho permanece condicionado à resolução, às condições iniciais e de contorno, às parametrizações físicas e à variável analisada. Por isso, embora seja um modelo operacional e amplamente aplicado, sua utilização em estudos de previsão ou avaliação de eventos extremos deve ser sempre acompanhada de validação específica para o domínio, período e fenômeno investigado.
 
-\section{Modelo MPAS (Model Prediction Across Scales)}
+\section{Modelo MPAS (Model for Prediction Across Scales)}
 
 O Model for Prediction Across Scales (MPAS), em seu componente atmosférico MPAS-A, é um modelo atmosférico global de resolução variável desenvolvido para representar processos atmosféricos em múltiplas escalas dentro de um mesmo domínio computacional. Diferentemente de modelos globais baseados em grades latitude-longitude regulares ou de modelos regionais aninhados em domínios espacialmente limitados, o MPAS utiliza uma malha global não estruturada, baseada em Tesselações Esféricas Centroidais de Voronoi (TECV, ou SCVT), que permite concentrar maior resolução espacial em regiões de interesse e manter resolução mais grosseira no restante do globo (Skamarock et al., 2012; Ringler et al., 2011; MPAS Development Team, 2026b).
 
@@ -395,16 +419,16 @@ Por ser um modelo global de resolução variável, o MPAS não atua nem como um 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/db9a63c3ec6ce36e04451467847b54fc6ae550ce.png}
-\caption{\textcolor{purple}{Exemplo de malha global de resolução variável no MPAS, com refinamento gradual sobre a América do Norte. A imagem ilustra a integração de uma região de maior resolução à própria malha esférica global, com transição suave entre células menores, na área refinada, e células maiores, nas demais regiões do domínio. Fonte: adaptado de MPAS Development Team (2026b).}}
+\caption{Exemplo de malha global de resolução variável no MPAS, com refinamento gradual sobre a América do Norte. A imagem ilustra a integração de uma região de maior resolução à própria malha esférica global, com transição suave entre células menores, na área refinada, e células maiores, nas demais regiões do domínio. Fonte: adaptado de MPAS Development Team (2026b).}
 \label{fig:figura-13}
 \end{figure}
 
-Essa grade de resolução variável é resultado do uso de células de Voronoi em uma malha esférica global, onde a malha primária é composta por polígonos de Voronoi, enquanto a malha secundária usando triângulos de Delaunay. Essa organização permite construir grades quase uniformes ou grades com transição gradual de resolução, evitando a descontinuidade abrupta típica de alguns esquemas de aninhamento. Assim, a resolução variável é, portanto, parte da formulação geométrica do modelo e não apenas um recurso externo de pós-processamento ou de interpolação (Skamarock et al., 2012; Ringler et al., 2011).
+Essa grade de resolução variável é resultado do uso de células de Voronoi em uma malha esférica global, onde a malha primária é composta por polígonos de Voronoi, enquanto a malha secundária usa triângulos de Delaunay. Essa organização permite construir grades quase uniformes ou grades com transição gradual de resolução, evitando a descontinuidade abrupta típica de alguns esquemas de aninhamento. Assim, a resolução variável é, portanto, parte da formulação geométrica do modelo e não apenas um recurso externo de pós-processamento ou de interpolação (Skamarock et al., 2012; Ringler et al., 2011).
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/e28f57b1db0ac6bfdd5544b8ce0ffe085e99f34f.png}
-\caption{\textcolor{purple}{Representação esquemática do esquema de duas malhas do MPAS, indicando os centros das células da malha primária (x$_i$), os centros das células da malha dupla (x$_v$) e os pontos de borda nos quais a velocidade é definida (x$_e$). Também são representadas a célula da malha primária (P$_i$), a célula da malha dupla (D$_v$) e os segmentos de linha ortogonais d$_e$ e l$_e$, que correspondem, respectivamente, à distância entre pontos x$_i$ vizinhos e à distância entre pontos x$_v$ vizinhos. Fonte: Sá, 2023.}}
+\caption{Representação esquemática do esquema de duas malhas do MPAS, indicando os centros das células da malha primária (x$_i$), os centros das células da malha dupla (x$_v$) e os pontos de borda nos quais a velocidade é definida (x$_e$). Também são representadas a célula da malha primária (P$_i$), a célula da malha dupla (D$_v$) e os segmentos de linha ortogonais d$_e$ e l$_e$, que correspondem, respectivamente, à distância entre pontos x$_i$ vizinhos e à distância entre pontos x$_v$ vizinhos. Fonte: Sá, 2023.}
 \label{fig:figura-14}
 \end{figure}
 
@@ -419,7 +443,7 @@ Na vertical, o MPAS-A utiliza uma coordenada híbrida associada aos sistemas BTF
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/5bc7902c7719137833e2d7875c5a80cab66b089d.png}
-\caption{\textcolor{purple}{Comparação entre a coordenada vertical tradicional do tipo terrain-following e a coordenada híbrida de Klemp (2011), utilizada no MPAS-A. Na coordenada tradicional (BTF), os níveis verticais acompanham a topografia até níveis mais altos, o que representa bem a influência do relevo próximo à superfície, mas pode propagar irregularidades do terreno para a alta troposfera. Na coordenada híbrida BTF/STF, os níveis acompanham melhor o relevo na baixa troposfera e se tornam progressivamente mais suavizados em altitude, reduzindo a influência artificial da topografia nos níveis superiores. Fonte: Sá (2023).}}
+\caption{Comparação entre a coordenada vertical tradicional do tipo terrain-following e a coordenada híbrida de Klemp (2011), utilizada no MPAS-A. Na coordenada tradicional (BTF), os níveis verticais acompanham a topografia até níveis mais altos, o que representa bem a influência do relevo próximo à superfície, mas pode propagar irregularidades do terreno para a alta troposfera. Na coordenada híbrida BTF/STF, os níveis acompanham melhor o relevo na baixa troposfera e se tornam progressivamente mais suavizados em altitude, reduzindo a influência artificial da topografia nos níveis superiores. Fonte: Sá (2023).}
 \label{fig:figura-15}
 \end{figure}
 
@@ -430,13 +454,13 @@ A preparação de simulações reais no MPAS-A envolve uma sequência específic
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/551cbf3523b103ecf46379c1e169c03e7cdf4dd6.png}
-\caption{\textcolor{purple}{Fluxo de preparação e execução do MPAS-A em simulações reais. Fonte: Sá (2023).}}
+\caption{Fluxo de preparação e execução do MPAS-A em simulações reais. Fonte: Sá (2023).}
 \label{fig:figura-16}
 \end{figure}
 
 Em aplicações de previsão com o MPAS-A, as condições iniciais podem ser obtidas a partir de análises, reanálises ou previsões globais, como GDAS/GFS, ERA/ECMWF ou bases equivalentes, conforme o objetivo do experimento e a disponibilidade dos dados. Esses campos definem o estado inicial das variáveis do modelo e, por isso, influenciam diretamente a evolução simulada. Além disso, a temperatura da superfície do mar (TSM) possui um papel específico no fluxo de execução do MPAS, pois pode ser atualizada separadamente das condições atmosféricas iniciais. Nos experimentos de Sá (2023), por exemplo, a base OISST v2.1 foi utilizada para avaliar a sensibilidade das simulações à frequência de atualização da TSM. Dessa forma, foi possível investigar o efeito de diferentes frequências de atualização oceânica sobre a precipitação simulada, sem alterar necessariamente a malha ou o conjunto principal de condições atmosféricas iniciais (Sá, 2023).
 
-A física atmosférica do MPAS-A é organizada em pacotes ou suites, que reúnem parametrizações para processos não resolvidos explicitamente pela grade. A documentação oficial lista opções para convecção, microfísica, radiação, superfície terrestre, camada superficial, camada limite planetária, fração de nuvens e arrasto por ondas de gravidade. Entre as opções convectivas, aparecem esquemas como Tiedtke, New Tiedtke, Grell-Freitas modificada e Kain-Fritsch, já para microfísica, existem opções como WSM 6-class, Thompson e Kessler, equanto para superfície e camada limite há combinações com Noah, Monin-Obukhov, YSU e MYNN, entre outras possibilidades (MPAS Development Team, 2026c; Sá, 2023).
+A física atmosférica do MPAS-A é organizada em pacotes ou suites, que reúnem parametrizações para processos não resolvidos explicitamente pela grade. A documentação oficial lista opções para convecção, microfísica, radiação, superfície terrestre, camada superficial, camada limite planetária, fração de nuvens e arrasto por ondas de gravidade. Entre as opções convectivas, aparecem esquemas como Tiedtke, New Tiedtke, Grell-Freitas modificada e Kain-Fritsch, já para microfísica, existem opções como WSM 6-class, Thompson e Kessler, enquanto para superfície e camada limite há combinações com Noah, Monin-Obukhov, YSU e MYNN, entre outras possibilidades (MPAS Development Team, 2026c; Sá, 2023).
 
 Desses pacotes físicos, dois são particularmente relevantes para aplicações atmosféricas em diferentes escalas: o mesoscale\_reference, que é direcionado a resoluções de mesoescala, onde a convecção profunda ainda precisa ser parametrizada de modo mais tradicional. E o convection\_permitting que é indicado para grades mais finas, próximas da escala em que parte da convecção passa a ser resolvida explicitamente pela dinâmica do modelo. Essa distinção é importante porque o aumento de resolução altera a relação entre precipitação resolvida em grade e precipitação parametrizada, o que pode mudar consideravelmente o comportamento do modelo. (Fowler et al., 2016; Grell; Freitas, 2014; MPAS Development Team, 2026c; Sá, 2023).
 
@@ -470,17 +494,17 @@ A revisão bibliográfica apresentada indica que o MPAS-A possui potencial para 
 
 Embora existam estudos avaliando modelos numéricos em eventos de chuva intensa no Brasil, ainda existe uma lacuna de avaliações que comparem diretamente o MPAS-A com modelos regionais já consolidados no contexto nacional, como o ETA e o BRAMS. Essa comparação é relevante porque o MPAS-A adota uma estratégia distinta, com domínio global e refinamento regional incorporado à própria malha, enquanto ETA e BRAMS seguem a lógica de modelos regionais de área limitada. Além disso, a entrada do MPAS-A como base do componente atmosférico do MONAN reforça a necessidade de avaliar, no contexto brasileiro, em que medida essa abordagem pode trazer ganhos efetivos na representação de eventos extremos de precipitação.
 
-No caso do evento de abril-maio de 2024 no Rio Grande do Sul, essa lacuna se torna particularmente pertinente, pois a precipitação extrema foi resultado da combinação entre anomalias de grande escala, jato de baixos níveis, frentes frias, transporte de umidade e sistemas convectivos de mesoescala (Reboita et al., 2024). Assim, esse passa ser um caso adequado para avaliar a capacidade do modelo em representar um evento em que processos locais e de grande escala estiveram fortemente acoplados.
+No caso do evento de abril-maio de 2024 no Rio Grande do Sul, essa lacuna se torna particularmente pertinente, pois a precipitação extrema foi resultado da combinação entre anomalias de grande escala, jato de baixos níveis, frentes frias, transporte de umidade e sistemas convectivos de mesoescala (Reboita et al., 2024). Assim, esse passa a ser um caso adequado para avaliar a capacidade do modelo em representar um evento em que processos locais e de grande escala estiveram fortemente acoplados.
 
 Nesse sentido, este trabalho contribui ao avaliar simulações de curto prazo do MPAS-A para o evento extremo de precipitação ocorrido no Rio Grande do Sul entre abril e maio de 2024, considerando diferentes configurações de resolução espacial e comparando seus resultados com os modelos ETA e BRAMS. Com isso, busca-se analisar não apenas a capacidade do modelo em representar os acumulados de precipitação, mas também sua habilidade em reproduzir a distribuição espacial, a intensidade e o deslocamento dos principais núcleos de chuva. Essa avaliação permite discutir, de forma aplicada, as potencialidades e limitações do MPAS-A para eventos extremos no Sul do Brasil e fornece uma base para estudos futuros envolvendo sua utilização em previsão de tempo e modelagem atmosférica no contexto nacional.
 
 \chapter{Metodologia}
 
-\section{Dados de Validação de precipitação.}
+\section{Dados de Validação de Precipitação.}
 
 Para avaliar a qualidade das previsões de precipitação geradas pelos modelos atmosféricos utilizados neste estudo, adotou-se como referência observacional o produto de precipitação em grade MERGE, operacionalmente disponibilizado pelo Centro de Previsão de Tempo e Estudos Climáticos (CPTEC) do Instituto Nacional de Pesquisas Espaciais (INPE).
 
-O MERGE (Rozante et al., 2010) é um conjunto de dados de alta resolução espacial desenvolvido reduzir as incertezas associadas à interpolação de precipitação em regiões caracterizadas por redes pluviométricas irregulares ou pouco densas especificamente para a América do Sul.
+O MERGE (Rozante et al., 2010) é um conjunto de dados de alta resolução espacial desenvolvido para reduzir as incertezas associadas à interpolação de precipitação em regiões caracterizadas por redes pluviométricas irregulares ou pouco densas especificamente para a América do Sul.
 
 O método de construção do MERGE envolve uma sequência estruturada de procedimentos: Inicialmente, os dados pluviométricos de superfície são georreferenciados para a mesma grade espacial das estimativas de satélite, assegurando compatibilidade entre as duas fontes de informação. Em seguida, remove-se um bloco de 5 $\times$ 5 pixels do IMERG ao redor de cada estação, impedindo que a estimativa satelital interfira na região de influência direta da medição terrestre. Após essa etapa, é criada uma lista combinada contendo primeiramente todas as observações de superfície e, em seguida, os valores satelitais remanescentes. A interpolação espacial do campo final de precipitação é realizada por meio da técnica de Análise Objetiva de Barnes, que aplica correções sucessivas ponderadas pela distância das observações, utilizando parâmetros como o raio de influência e o coeficiente de convergência para determinar a suavização adequada do campo (Rozante et al., 2010).
 
@@ -488,7 +512,7 @@ Atualmente, o produto cobre toda a América do Sul e parte dos oceanos próximos
 
 Os dados do MERGE encontram-se disponíveis em formato GRIB2 e podem ser obtidos por download direto via FTP no endereço: \textcolor{red}{\url{https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/}}.
 
-Como as previsões dos modelos utilizados neste estudo foram produzidas em formato horário e referenciadas temporalmente em UTC±0, optou-se pela utilização dos dados horários do MERGE, com posterior acumulação das 24 horas de cada dia, garantindo a equivalência temporal dos períodos de acumulação de precipitação entre todas as fontes analisadas.
+Como as previsões dos modelos utilizados neste estudo foram produzidas em formato horário e referenciadas temporalmente em UTC+0, optou-se pela utilização dos dados horários do MERGE, com posterior acumulação das 24 horas de cada dia (UTC+0), garantindo a equivalência temporal dos períodos de acumulação de precipitação entre todas as fontes analisadas.
 
 É importante destacar que, embora apresente desempenho superior à simples interpolação dos valores de pluviômetros, o MERGE, assim como outros produtos gridados de precipitação que utilizam imagens de satélite e estações in-situ, ainda apresenta degradação em sua precisão em áreas com baixa densidade de estações (Rozante et al. (2024); Silva et al. (2020)).
 
@@ -498,29 +522,29 @@ Para essa validação, foram utilizadas estações meteorológicas automáticas 
 
 Para este estudo, foram selecionadas todas as estações localizadas geograficamente dentro do estado do Rio Grande do Sul que apresentavam séries completas de precipitação horária entre os dias 28/04/2024 e 03/05/2024, garantindo assim uma base observacional confiável para todo o evento analisado.
 
-Para validar espacialmente os campos de precipitação do produto MERGE, foram elaborados gráficos de ``heatmaps'' em comparação com os dados das estações automáticas da região. Essa análise permitiu verificar se os padrões espaciais de chuva representados pelo MERGE estavam coerentes com aqueles observados nas estações, conforme ilustrado na \textcolor{green}{Figura~\ref*{fig:figura-17}}.
+Para validar espacialmente os campos de precipitação do produto MERGE, foram elaborados gráficos de ``heatmaps'' em comparação com os dados das estações automáticas da região. Essa análise permitiu verificar se os padrões espaciais de chuva representados pelo MERGE estavam coerentes com aqueles observados nas estações, conforme ilustrado na Figura~\ref*{fig:figura-17}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/6aa03e456657a743593f67366d03e3efc3a8457e.png}
-\caption{\textcolor{purple}{Comparação espacial entre os acumulados diários de precipitação do MERGE e os registros das estações automáticas do INMET no período analisado. Fonte: Autor.}}
+\caption{Comparação espacial entre os acumulados diários de precipitação do MERGE e os registros das estações automáticas do INMET no período analisado. Fonte: Autor.}
 \label{fig:figura-17}
 \end{figure}
 
 Observou-se, portanto, que o produto MERGE representou de forma consistente tanto os valores quanto a distribuição espacial da precipitação sobre o continente. Identificaram-se apenas discrepâncias localizadas, sobretudo na região da Lagoa dos Patos, onde o MERGE apresentou volumes substancialmente superiores aos registrados pelas estações próximas durante os dias de maior precipitação. Padrões semelhantes também foram verificados em áreas da Argentina e sobre o oceano Atlântico nas datas de 30/04/2024 e 02/05/2024, o que era esperado diante da ausência de estações nessas regiões para ancorar a interpolação. Apesar dessas limitações pontuais e, como o foco deste trabalho está concentrado na análise da precipitação no estado do Rio Grande do Sul, o produto foi considerado adequado para utilização como referência observacional.
 
-Adicionalmente, com o objetivo de avaliar temporalmente a correspondência entre o observado nas estações e o representado pelo MERGE, optou-se pela elaboração de gráficos de boxplot contendo os valores de correlação de Pearson e de RMSE calculados para as 32 estações selecionadas, conforme apresentado na \textbf{\textcolor{green}{Figura~\ref*{fig:figura-18}}}. Essas métricas foram obtidas a partir dos acumulados diários de precipitação tanto das estações quanto do pixel mais próximo de cada estação no produto em grade ao longo do período estudado.
+Adicionalmente, com o objetivo de avaliar temporalmente a correspondência entre o observado nas estações e o representado pelo MERGE, optou-se pela elaboração de gráficos de boxplot contendo os valores de correlação de Pearson e de RMSE calculados para as 32 estações selecionadas, conforme apresentado na \textbf{Figura~\ref*{fig:figura-18}}. Essas métricas foram obtidas a partir dos acumulados diários de precipitação tanto das estações quanto do pixel mais próximo de cada estação no produto em grade ao longo do período estudado.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/87d83573f3a6ef9ee923b024adb08611acd0a412.png}
-\caption{\textcolor{purple}{Distribuição dos valores de RMSE e correlação de Pearson entre os acumulados diários do MERGE e das estações automáticas do INMET. Fonte: Autor.}}
+\caption{Distribuição dos valores de RMSE e correlação de Pearson entre os acumulados diários do MERGE e das estações automáticas do INMET. Fonte: Autor.}
 \label{fig:figura-18}
 \end{figure}
 
-Pode-se observar na \textcolor{green}{Figura~\ref*{fig:figura-18}} que mais de 90\% das estações apresentam coeficientes de correlação de Pearson superiores a 0.9, evidenciando uma elevada concordância temporal entre o MERGE e os dados observados. Quando esse resultado é combinado com os baixos valores de RMSE (com aproximadamente 75\% das estações apresentando erros inferiores a 12,5 mm) reforça-se a conclusão de que há, de fato, uma alta consistência temporal entre as séries de precipitação registradas pelas estações e aquelas representadas pelo produto MERGE.
+Pode-se observar na Figura~\ref*{fig:figura-18} que mais de 90\% das estações apresentam coeficientes de correlação de Pearson superiores a 0,9, evidenciando uma elevada concordância temporal entre o MERGE e os dados observados. Quando esse resultado é combinado com os baixos valores de RMSE (com aproximadamente 75\% das estações apresentando erros inferiores a 12,5 mm) reforça-se a conclusão de que há, de fato, uma alta consistência temporal entre as séries de precipitação registradas pelas estações e aquelas representadas pelo produto MERGE.
 
-Em vista dos resultados apresentados \textcolor{green}{(figuras~\ref*{fig:figura-17} e~\ref*{fig:figura-18})} optou-se, com maior segurança quanto à qualidade da representação do evento, por utilizar o produto MERGE como ground truth da precipitação a ser comparada com as previsões numéricas obtidas.
+Em vista dos resultados apresentados (figuras~\ref*{fig:figura-17} e~\ref*{fig:figura-18}) optou-se, com maior segurança quanto à qualidade da representação do evento, por utilizar o produto MERGE como produto de referência da precipitação a ser comparada com as previsões numéricas obtidas.
 
 \section{Dados de Precipitação Prevista}
 
@@ -530,25 +554,25 @@ Com o objetivo de analisar a sensibilidade dos modelos ETA, BRAMS e MPAS em rela
 
 O objetivo desta abordagem é analisar a influência da proximidade temporal entre a condição inicial e o pico de precipitação do evento meteorológico estudado, verificando a hipótese de que, para este caso, condições iniciais mais próximas aos maiores acumulados poderiam proporcionar melhorias na qualidade preditiva dos modelos para este evento específico.
 
-Um resumo das principais características de cada experimento é apresentado nas \textcolor{green}{figuras~\ref*{fig:figura-19} e~\ref*{fig:figura-20}.}
+Um resumo das principais características de cada experimento é apresentado nas figuras~\ref*{fig:figura-19} e~\ref*{fig:figura-20}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/7b3aa9221d228e7a6c0a841ef97da97916f7b8d0.png}
-\caption{\textcolor{purple}{Resumo das principais características do experimento com condição inicial em 28/04/2024. Fonte: Autor.}}
+\caption{Resumo das principais características do experimento com condição inicial em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-19}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/e8306f130b19152d19798c1df006e0bdd1d29779.png}
-\caption{\textcolor{purple}{Resumo das principais características do experimento com condição inicial em 29/04/2024. Fonte: Autor.}}
+\caption{Resumo das principais características do experimento com condição inicial em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-20}
 \end{figure}
 
 \subsection{Obtenção dos dados do ETA e BRAMS}
 
-Os dados de previsão histórica empregados neste estudo como previsões de referência, foram obtidos a partir dos modelos numéricos ETA e BRAMS, ambos com resolução espacial aproximada de 8 km. Essas previsões foram utilizadas para fins de comparação com os resultados gerados pelo modelo MPAS.
+Os dados de previsão histórica empregados neste estudo como previsões de referência foram obtidos a partir dos modelos numéricos ETA e BRAMS, ambos com resolução espacial aproximada de 8 km. Essas previsões foram utilizadas para fins de comparação com os resultados gerados pelo modelo MPAS.
 
 O modelo ETA encontra-se em operação no Centro de Previsão de Tempo e Estudos Climáticos (CPTEC/INPE) desde 1996, cobrindo grande parte da América do Sul. Esse modelo fornece previsões detalhadas de variáveis meteorológicas e é amplamente utilizado tanto em previsões de curto prazo, com horizontes de até 15 dias, quanto em aplicações sazonais, incluindo previsão de precipitação, monitoramento de eventos extremos e suporte a atividades agrícolas e hidrológicas (CHOU \emph{et al}., 2020; MACHADO \emph{et al}., 2007).
 
@@ -586,27 +610,27 @@ Os conjuntos de dados obtidos a partir desses repositórios constituem a base da
 
 \subsubsection{Grades e seus ajustes para a região de estudo}
 
-Conforme \textcolor{red}{descrito na Seção 4.4}, o MPAS emprega uma malha horizontal não estruturada baseada em tesselações esféricas centroidais de Voronoi \textsuperscript{{[}31{]}}, que possibilita a aplicação de refinamento espacial localizado de forma contínua.
+Conforme descrito na Seção 4.4, o MPAS emprega uma malha horizontal não estruturada baseada em tesselações esféricas centroidais de Voronoi \textsuperscript{{[}31{]}}, que possibilita a aplicação de refinamento espacial localizado de forma contínua.
 
 Neste trabalho, foram utilizadas três configurações distintas de malha, selecionadas com o objetivo de avaliar a sensibilidade dos resultados do modelo à sua resolução espacial. As configurações consistiram em: uma malha quase uniforme de resolução fixa de 60x60 km, uma malha de resolução variável indo de 60 km até 15 km na área de interesse, e uma malha de resolução variável indo de 60 km até 3 km na área de interesse. Nas malhas de resolução variável, a região refinada é incorporada de forma gradual, mantendo-se uma resolução mais grosseira fora da área de interesse, o que reduz o custo computacional em comparação com malhas uniformemente refinadas.
 
-As malhas arquivos (.grid), bem como seus respectivos arquivos de conectividade (\emph{graph.info}) e, quando disponíveis, os arquivos de campos estáticos (\emph{static.nc}), foram obtidos a partir do repositório oficial do MPAS (\url{https://mpas-dev.github.io/atmosphere/atmosphere_meshes.html}). Para a malha quase uniforme de 60 km, o arquivo \emph{static.nc} foi utilizado diretamente, uma vez que já se encontra previamente interpolado com os campos geográficos padrão. Em contrapartida, para as malhas de resolução variável (60x15 km e 60x3 km), os arquivos \emph{static} não são fornecidos no repositório e foram gerados posteriormente durante a etapa de pré-processamento do modelo.
+As malhas (arquivos ".grid"), bem como seus respectivos arquivos de conectividade (\emph{graph.info}) e, quando disponíveis, os arquivos de campos estáticos (\emph{static.nc}), foram obtidos a partir do repositório oficial do MPAS (\url{https://mpas-dev.github.io/atmosphere/atmosphere_meshes.html}). Para a malha quase uniforme de 60 km, o arquivo \emph{static.nc} foi utilizado diretamente, uma vez que já se encontra previamente interpolado com os campos geográficos padrão. Em contrapartida, para as malhas de resolução variável (60x15 km e 60x3 km), os arquivos \emph{static} não são fornecidos no repositório e foram gerados posteriormente durante a etapa de pré-processamento do modelo.
 
-Uma vez que as malhas de resolução variável disponibilizadas pelo MPAS apresentam, por padrão, a região de refinamento centrada em 0$^\circ$ de latitude e 0$^\circ$ de longitude, foi necessária a realocação espacial da região refinada para que esta coincidisse com a área de interesse do estudo. Para esse fim, utilizou-se o utilitário grid\_rotate, que aplica uma rotação rígida da malha na esfera, preservando sua estrutura e evitando a necessidade de regeneração completa da malha. Um diagrama exemplificando o processo é mostrado \textcolor{green}{na figura~\ref*{fig:figura-21}.}
+Uma vez que as malhas de resolução variável disponibilizadas pelo MPAS apresentam, por padrão, a região de refinamento centrada em 0$^\circ$ de latitude e 0$^\circ$ de longitude, foi necessária a realocação espacial da região refinada para que esta coincidisse com a área de interesse do estudo. Para esse fim, utilizou-se o utilitário grid\_rotate, que aplica uma rotação rígida da malha na esfera, preservando sua estrutura e evitando a necessidade de regeneração completa da malha. Um diagrama exemplificando o processo é mostrado na figura~\ref*{fig:figura-21}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/2848e07284420ee8f9a28530ca627c4771847722.png}
-\caption{\textcolor{purple}{Representação esquemática do procedimento de rotação da malha do MPAS por meio do utilitário grid\_rotate. Fonte: Sá (2023).}}
+\caption{Representação esquemática do procedimento de rotação da malha do MPAS por meio do utilitário grid\_rotate. Fonte: Sá (2023).}
 \label{fig:figura-21}
 \end{figure}
 
-Os parâmetros de rotação foram definidos por meio de um arquivo namelist.input, no qual se especificaram as coordenadas geográficas originais e finais do ponto de referência da malha, bem como a rotação adicional em torno do eixo local. Para este estudo a malha foi centrada aproximadamente no centro do estado do Rio Grande do Sul e as configurações do arquivo namelist.input estão descritas \textcolor{green}{na figura~\ref*{fig:figura-22}.}
+Os parâmetros de rotação foram definidos por meio de um arquivo namelist.input, no qual se especificaram as coordenadas geográficas originais e finais do ponto de referência da malha, bem como a rotação adicional em torno do eixo local. Para este estudo a malha foi centrada aproximadamente no centro do estado do Rio Grande do Sul e as configurações do arquivo namelist.input estão descritas na figura~\ref*{fig:figura-22}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f13027b8fa3e4ec0c2df59b4039d24054fb43907.png}
-\caption{\textcolor{purple}{Parâmetros utilizados no arquivo namelist.input para a rotação da malha e realocação da região refinada. Fonte: Autor.}}
+\caption{Parâmetros utilizados no arquivo namelist.input para a rotação da malha e realocação da região refinada. Fonte: Autor.}
 \label{fig:figura-22}
 \end{figure}
 
@@ -622,34 +646,34 @@ Dessa forma, a preparação das malhas envolveu, de maneira sistemática, a sele
 
 A incorporação à grade espacial das informações de topografia, uso e cobertura do solo e demais campos geográficos considerados estáticos para a simulação de curto prazo foi realizada por meio da geração do arquivo \emph{static}. Esse arquivo contém os campos estáticos interpolados para a malha espacial do modelo e é requisito fundamental para a execução de simulações com malhas de resolução variável, uma vez que tais arquivos não são disponibilizados previamente no repositório oficial do MPAS.
 
-Para este trabalho, a geração do arquivo \emph{static} foi realizada a partir das malha de resolução variável previamente preparadas e rotacionadas, de forma que a região de maior refinamento espacial estivesse corretamente posicionada sobre a área de interesse. Este processo de interpolação dos campos geográficos foi conduzido \textcolor{red}{}utilizando-se os arquivos estáticos disponíveis no WRF Preprocessing System (WPS) \textsuperscript{{[}32{]}} por intermédio do pré-processador do MPAS, o init\_atmosphere.
+Para este trabalho, a geração do arquivo \emph{static} foi realizada a partir das malhas de resolução variável previamente preparadas e rotacionadas, de forma que a região de maior refinamento espacial estivesse corretamente posicionada sobre a área de interesse. Este processo de interpolação dos campos geográficos foi conduzido \textcolor{red}{}utilizando-se os arquivos estáticos disponíveis no WRF Preprocessing System (WPS) \textsuperscript{{[}32{]}} por intermédio do pré-processador do MPAS, o init\_atmosphere.
 
-Para isso, o arquivo namelist.init\_atmosphere foi ajustado \textcolor{green}{conforme a figura~\ref*{fig:figura-23}} de modo a ativar apenas os estágios necessários à geração do \emph{static}, com o parâmetro config\_geog\_data\_path sendo configurado para apontar para o diretório com os dados geográficos do WPS, assegurando o acesso correto aos dados de topografia, uso do solo, fração de vegetação, albedo e demais campos necessários.
+Para isso, o arquivo namelist.init\_atmosphere foi ajustado conforme a figura~\ref*{fig:figura-23} de modo a ativar apenas os estágios necessários à geração do \emph{static}, com o parâmetro config\_geog\_data\_path sendo configurado para apontar para o diretório com os dados geográficos do WPS, assegurando o acesso correto aos dados de topografia, uso do solo, fração de vegetação, albedo e demais campos necessários.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/ebd24d6449d44c92dc0085e1d0243996fcdc756b.png}
-\caption{\textcolor{purple}{Configuração do arquivo namelist.init\_atmosphere utilizada na geração dos campos estáticos da malha. Fonte: Autor.}}
+\caption{Configuração do arquivo namelist.init\_atmosphere utilizada na geração dos campos estáticos da malha. Fonte: Autor.}
 \label{fig:figura-23}
 \end{figure}
 
-Paralelamente, o arquivo streams.init\_atmosphere foi configurado para definir explicitamente os arquivos de entrada e saída do pré-processamento. Nesse arquivo o campo de entrada foi especificado (mostrando o exemplo de configuração para a grade de 90x25 km) como x4.163842.RS.grid.nc, correspondente à malha rotacionada, enquanto o campo de saída foi definido como x4.163842.RS.static.nc, que contém os campos estáticos interpolados para a malha MPAS. \textcolor{green}{A figura~\ref*{fig:figura-24}} apresenta o conteúdo do arquivo streams.init\_atmosphere devidamente configurado.
+Paralelamente, o arquivo streams.init\_atmosphere foi configurado para definir explicitamente os arquivos de entrada e saída do pré-processamento. Nesse arquivo o campo de entrada foi especificado (mostrando o exemplo de configuração para a grade de 90x25 km) como x4.163842.RS.grid.nc, correspondente à malha rotacionada, enquanto o campo de saída foi definido como x4.163842.RS.static.nc, que contém os campos estáticos interpolados para a malha MPAS. A figura~\ref*{fig:figura-24} apresenta o conteúdo do arquivo streams.init\_atmosphere devidamente configurado.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/ef0ddce24d965a66eb2ef45962cbb8c0c0d8cc37.png}
-\caption{\textcolor{purple}{Configuração do arquivo streams.init\_atmosphere utilizada na geração do arquivo static. Fonte: Autor.}}
+\caption{Configuração do arquivo streams.init\_atmosphere utilizada na geração do arquivo static. Fonte: Autor.}
 \label{fig:figura-24}
 \end{figure}
 
 Uma vez concluídas as configurações dos arquivos de controle, o pré-processador ``init\_atmosphere'' foi executado e este procedimento resultou na geração do arquivo x4.163842.RS.static.nc, o qual incorpora de forma consistente as informações de topografia, uso e cobertura do solo e demais campos geográficos estáticos necessários à simulação atmosférica.
 
-O fluxo geral desse processo de geração do arquivo \emph{static} foi executado para cada uma das duas malhas de resolução variável para cada experimento, e ele segue o esquema apresentado na \textcolor{green}{figura~\ref*{fig:figura-25}}.
+O fluxo geral desse processo de geração do arquivo \emph{static} foi executado para cada uma das duas malhas de resolução variável para cada experimento, e ele segue o esquema apresentado na figura~\ref*{fig:figura-25}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/9ef85f500a48f3e1e9680e7b8d2db81a64c3c734.png}
-\caption{\textcolor{purple}{Fluxo de processamento para geração do arquivo static a partir da malha rotacionada, dos dados geográficos do WPS e dos arquivos de controle do init\_atmosphere. Fonte: Sá (2023).}}
+\caption{Fluxo de processamento para geração do arquivo static a partir da malha rotacionada, dos dados geográficos do WPS e dos arquivos de controle do init\_atmosphere. Fonte: Sá (2023).}
 \label{fig:figura-25}
 \end{figure}
 
@@ -663,21 +687,21 @@ Tanto o endpoint operacional quanto o arquivo histórico correspondem a campos d
 
 No entanto, o MPAS não consegue utilizar esse arquivo em formato GRIB-2 diretamente como condição inicial atmosférica, sendo necessária a conversão para um formato compatível. Essa conversão para o formato intermediário requerido pelo MPAS foi realizada por meio do programa ungrib do sistema WPS/WRF e, nessa etapa, o ungrib foi empregado para a decodificação dos campos atmosféricos presentes nos arquivos do GFS, extraindo as variáveis necessárias à geração do arquivo de condições iniciais (``init'') do MPAS.
 
-Para a execução do ungrib, foi necessária a escolha do arquivo ``Vtable'' correto, no caso o Vtable.GFS, além da configuração do namelist.wps, que foi ajustado conforme apresentado na \textcolor{green}{Figura~\ref*{fig:figura-26}}.
+Para a execução do ungrib, foi necessária a escolha do arquivo ``Vtable'' correto, no caso o Vtable.GFS, além da configuração do namelist.wps, que foi ajustado conforme apresentado na Figura~\ref*{fig:figura-26}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/17db7e5e6b9358abd3cb5f6bf27aa508a9e0212b.png}
-\caption{\textcolor{purple}{Configuração do arquivo namelist.wps utilizada na conversão dos dados do GFS para o formato intermediário FILE. Fonte: Autor.}}
+\caption{Configuração do arquivo namelist.wps utilizada na conversão dos dados do GFS para o formato intermediário FILE. Fonte: Autor.}
 \label{fig:figura-26}
 \end{figure}
 
-Dessa forma, o arquivo intermediário com prefixo FILE, contendo a condição inicial atmosférica, foi gerado a partir do arquivo GRIB-2 do GFS, conforme o fluxo exemplificado na \textcolor{green}{Figura~\ref*{fig:figura-27}}. Posteriormente, esse arquivo foi utilizado como entrada direta para a etapa subsequente de geração das condições iniciais do MPAS.
+Dessa forma, o arquivo intermediário com prefixo FILE, contendo a condição inicial atmosférica, foi gerado a partir do arquivo GRIB-2 do GFS, conforme o fluxo exemplificado na Figura~\ref*{fig:figura-27}. Posteriormente, esse arquivo foi utilizado como entrada direta para a etapa subsequente de geração das condições iniciais do MPAS.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/6ec0da5b6065816b7a59b7a20e9b02bd110fab85.png}
-\caption{\textcolor{purple}{Fluxo de conversão dos dados atmosféricos do GFS por meio do programa ungrib do sistema WPS/WRF. Adaptado de Sá (2023).}}
+\caption{Fluxo de conversão dos dados atmosféricos do GFS por meio do programa ungrib do sistema WPS/WRF. Adaptado de Sá (2023).}
 \label{fig:figura-27}
 \end{figure}
 
@@ -687,22 +711,22 @@ A criação do arquivo de condições iniciais do MPAS (arquivo init) correspond
 
 Para essa integração, utiliza-se novamente o pré-processador init\_atmosphere, que, diferentemente da etapa de geração do arquivo static, passa a desempenhar um papel análogo ao do metgrid no sistema WRF, combinando os campos atmosféricos iniciais com os dados geográficos do domínio.
 
-Nessa etapa, os arquivos de configuração utilizados são, novamente, o namelist.init\_atmosphere e o streams.init\_atmosphere. O fluxo de processamento recebe como entradas o arquivo static, previamente gerado pelo próprio init\_atmosphere em uma etapa anterior com configurações distintas, e o arquivo FILE, produzido pelo ungrib. O fluxo correspondente a essa etapa é apresentado na \textcolor{green}{Figura~\ref*{fig:figura-28}}.
+Nessa etapa, os arquivos de configuração utilizados são, novamente, o namelist.init\_atmosphere e o streams.init\_atmosphere. O fluxo de processamento recebe como entradas o arquivo static, previamente gerado pelo próprio init\_atmosphere em uma etapa anterior com configurações distintas, e o arquivo FILE, produzido pelo ungrib. O fluxo correspondente a essa etapa é apresentado na Figura~\ref*{fig:figura-28}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f73f4a7c9e0f2160b9ddb94d1c33d9bd5948c51b.png}
-\caption{\textcolor{purple}{Fluxo de integração entre o arquivo static e o arquivo FILE para geração das condições iniciais do MPAS. Fonte: Sá (2023).}}
+\caption{Fluxo de integração entre o arquivo static e o arquivo FILE para geração das condições iniciais do MPAS. Fonte: Sá (2023).}
 \label{fig:figura-28}
 \end{figure}
 
-As configurações para o arquivo namelist.init\_atmosphere desta etapa estão dispostas na \textcolor{green}{Tabela~\ref*{tab:tabela-01}}. Onde:
+As configurações para o arquivo namelist.init\_atmosphere desta etapa estão dispostas na Tabela~\ref*{tab:tabela-01}. Onde:
 
 \begin{itemize}
 \item
   config\_start\_time: Data de início da condição inicial no formato YYYY-MM-DD\_HH:MN:SS
 \item
-  config\_stop\_time: tabém é a data de início da condição inicial no formato YYYY-MM-DD\_HH:MN:SS caso não sejam utilizadas perturbações nas condições iniciais
+  config\_stop\_time: também é a data de início da condição inicial no formato YYYY-MM-DD\_HH:MN:SS caso não sejam utilizadas perturbações nas condições iniciais
 \item
   config\_geog\_data\_path: é o caminho para a pasta GEOG do WPS
 \item
@@ -774,7 +798,7 @@ As configurações para o arquivo namelist.init\_atmosphere desta etapa estão d
 \texttt{\hspace*{1em}config\_block\_decomp\_file\_prefix = 'x4.163842.graph.info.part.'} \\
 \end{longtable}
 
-Já as configuraçções para o arquivo streams.init\_atmosphere desta etapa estão dispostas na \textcolor{green}{Tabela~\ref*{tab:tabela-02}}. Onde:
+Já as configurações para o arquivo streams.init\_atmosphere desta etapa estão dispostas na Tabela~\ref*{tab:tabela-02}. Onde:
 
 \begin{itemize}
 \item
@@ -812,7 +836,7 @@ Ao final do processo, foi gerado o arquivo "init" correspondente à data inicial
 
 Com o arquivo de condições iniciais (\emph{init}) corretamente gerado e disponível no diretório de execução do MPAS, a etapa seguinte consiste na configuração da simulação por meio dos arquivos namelist.atmosphere e streams.atmosphere, que definem, respectivamente, os parâmetros físicos e numéricos do modelo, e o controle dos fluxos de entrada e saída de dados durante a integração temporal.
 
-O arquivo namelist.atmosphere é responsável por controlar os parâmetros fundamentais da simulação atmosférica, incluindo o passo de tempo, a duração total da integração, a representação espacial associada à malha, a decomposição paralela do domínio e a escolha das parametrizações físicas. Para os experimentos realizados, esses parâmetros foram definidos em função da data inicial e da resolução espacial de cada simulação. A \textcolor{green}{Tabela~\ref*{tab:tabela-03}} apresenta, a título de exemplo, a configuração adotada para um dos casos simulados, onde:
+O arquivo namelist.atmosphere é responsável por controlar os parâmetros fundamentais da simulação atmosférica, incluindo o passo de tempo, a duração total da integração, a representação espacial associada à malha, a decomposição paralela do domínio e a escolha das parametrizações físicas. Para os experimentos realizados, esses parâmetros foram definidos em função da data inicial e da resolução espacial de cada simulação. A Tabela~\ref*{tab:tabela-03} apresenta, a título de exemplo, a configuração adotada para um dos casos simulados, onde:
 
 \begin{itemize}
 \item
@@ -837,7 +861,7 @@ O arquivo namelist.atmosphere é responsável por controlar os parâmetros funda
   \textbf{config\_physics\_suite:} Define o pacote de esquemas físicos a ser utilizado na simulação atmosférica. Esse pacote agrupa parametrizações responsáveis pela representação de processos físicos como microfísica, convecção, camada limite planetária, radiação e interações superfície--atmosfera, garantindo coerência interna entre os esquemas selecionados e simplificando a configuração do modelo.
 \end{itemize}
 
-É importante notar que, especificamente para a resolução de 60x3 km, utilizou-se a configuração ``convection\_permitting'' nessa variável, de forma a adequar as parametrizações físicas à presença de uma região da malha em escala convectiva. Enquanto as rodadas de 60x60 km e 60x10 km utilizam a suite ``mesoscale\_reference'', adequada para resoluções mais grosseiras. A suite ``convection\_permitting'' é recomendada para espaçamentos inferiores a 10 km, permitindo uma representação mais realista dos processos convectivos e da precipitação associada (UCAR, 2024).
+É importante notar que, especificamente para a resolução de 60x3 km, utilizou-se a configuração ``convection\_permitting'' nessa variável, de forma a adequar as parametrizações físicas à presença de uma região da malha em escala convectiva. Enquanto as rodadas de 60x60 km e 60x15 km utilizam a suite ``mesoscale\_reference'', adequada para resoluções mais grosseiras. A suite ``convection\_permitting'' é recomendada para espaçamentos inferiores a 10 km, permitindo uma representação mais realista dos processos convectivos e da precipitação associada (UCAR, 2024).
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
@@ -910,7 +934,7 @@ O arquivo namelist.atmosphere é responsável por controlar os parâmetros funda
 \texttt{/} \\
 \end{longtable}
 
-O controle dos arquivos de entrada e saída de dados da simulação é realizado pelo arquivo streams.atmosphere por meio de ``streams'' que são denotadas por ``\textless\textgreater'', de acordo com o apresentado na \textcolor{green}{Tabela~\ref*{tab:tabela-04}}, onde:
+O controle dos arquivos de entrada e saída de dados da simulação é realizado pelo arquivo streams.atmosphere por meio de ``streams'' que são denotadas por ``\textless\textgreater'', de acordo com o apresentado na Tabela~\ref*{tab:tabela-04}, onde:
 
 \begin{itemize}
 \item
@@ -977,7 +1001,7 @@ No caso dos experimentos realizados neste trabalho, as variáveis rainc e rainnc
 
 Com os arquivos namelist.atmosphere e streams.atmosphere corretamente configurados, a execução do modelo MPAS é realizada por meio de um comando MPI, que inicializa o modelo utilizando o número de processos previamente definido. Para que a execução seja bem-sucedida, é necessário que o arquivo de particionamento da malha (graph.info) esteja presente e seja compatível com o número de processadores utilizados. O comando para executar, por exemplo, com 48 processadores é:
 
-\textbf{\$} mpirun -np 16 ./atmosphere\_model
+\textbf{\$} mpirun -np 48 ./atmosphere\_model
 
 \subsubsection{Organização das simulações}
 
@@ -989,12 +1013,12 @@ As simulações com resolução intermediária (60$\times$15 km), também uma pa
 
 Por fim, as simulações de maior resolução espacial (60$\times$3 km) foram igualmente realizadas no supercomputador MareNostrum, no BSC. Nesse caso, foram empregados 2.226 processadores, com um total de 8.904 GB de memória RAM utilizados. O tempo total de execução para cada uma dessas simulações foi de aproximadamente 16 minutos.
 
-Os experimentos realizados e suas principais características, incluindo datas de inicialização, resoluções espaciais, infraestrutura computacional utilizada e tempos de execução, encontram-se resumidos na \textcolor{green}{Figura~\ref*{fig:figura-29}}.
+Os experimentos realizados e suas principais características, incluindo datas de inicialização, resoluções espaciais, infraestrutura computacional utilizada e tempos de execução, encontram-se resumidos na Figura~\ref*{fig:figura-29}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/2f1f2cf6d4722c8084497b9992001acaf7314bc1.png}
-\caption{\textcolor{purple}{Resumo das simulações realizadas com o MPAS, incluindo resolução espacial, infraestrutura computacional e tempo de execução. Fonte: Autor.}}
+\caption{Resumo das simulações realizadas com o MPAS, incluindo resolução espacial, infraestrutura computacional e tempo de execução. Fonte: Autor.}
 \label{fig:figura-29}
 \end{figure}
 
@@ -1002,9 +1026,9 @@ Os experimentos realizados e suas principais características, incluindo datas d
 
 Durante a execução das simulações numéricas com o MPAS, os resultados do modelo são armazenados em arquivos no formato NetCDF, organizados principalmente em dois tipos de saídas: arquivos do tipo \emph{history}, que contêm o estado prognóstico do modelo em determinados instantes de tempo, e arquivos do tipo \emph{diag}, que armazenam variáveis diagnósticas com maior frequência temporal. Para permitir a análise e visualização desses resultados em grades regulares latitude--longitude, foi utilizado o utilitário convert\_mpas, que pode ser baixado no endereço: \url{https://github.com/mgduda/convert_mpas/tree/master} .
 
-Após compilara o programa, o processamento deve ser realizado a partir do diretório que contém os arquivos de saída do MPAS, normalmente identificados pelos padrões history*.nc e diag*.nc.
+Após compilar o programa, o processamento deve ser realizado a partir do diretório que contém os arquivos de saída do MPAS, normalmente identificados pelos padrões history*.nc e diag*.nc.
 
-Em sua forma mais simples, o convert\_mpas pode ser aplicado diretamente a um único arquivo NetCDF do MPAS, resultando na interpolação automática das variáveis disponíveis para uma grade regular latitude--longitude. O produto dessa interpolação é armazenado em um arquivo padrão denominado latlon.nc, que ja é o produto interpolado em grade regular com todas as variáveis contidas nos arquivos diag.
+Em sua forma mais simples, o convert\_mpas pode ser aplicado diretamente a um único arquivo NetCDF do MPAS, resultando na interpolação automática das variáveis disponíveis para uma grade regular latitude--longitude. O produto dessa interpolação é armazenado em um arquivo padrão denominado latlon.nc, que já é o produto interpolado em grade regular com todas as variáveis contidas nos arquivos diag.
 
 Como o processo de interpolação pode ser computacionalmente custoso quando todas as variáveis são incluídas, o convert\_mpas permite restringir o conjunto de campos a serem interpolados. Para isso, pode-se criar um arquivo de texto denominado include\_fields, no qual são listados, linha a linha, os nomes das variáveis de interesse. Quando esse arquivo está presente no diretório de trabalho, apenas os campos especificados são processados, reduzindo significativamente o tempo de execução e o tamanho do arquivo de saída.
 
@@ -1016,7 +1040,7 @@ Onde, ``caminho1'' é o caminho para um arquivo com informações da malha (stat
 
 Adicionalmente, o convert\_mpas possibilita a definição de um domínio geográfico específico para a interpolação, por meio de um arquivo denominado target\_domain. Nesse arquivo, são especificados os limites espaciais da região de interesse e o número de pontos da grade regular de saída. Essa funcionalidade é particularmente útil para análises regionais, pois reduz o volume de dados processados e concentra a interpolação em áreas específicas do domínio global do modelo.
 
-Em todas as simulações executas, converteu-se o output dos arquivos diag apenas das variáveis rainc e rainnc e, para o caso das simulações feitas com a mais alta resolução (60x3 km) utilizou-se também da conversão somente de uma região de interesse.
+Em todas as simulações executadas, converteu-se o output dos arquivos diag apenas das variáveis rainc e rainnc e, para o caso das simulações feitas com a mais alta resolução (60x3 km) utilizou-se também da conversão somente de uma região de interesse.
 
 Após a obtenção dos arquivos de saída interpolados em grade regular, foi desenvolvido um script em linguagem Python para a continuidade do pós-processamento. Inicialmente, reconstruiu-se a coordenada temporal real das simulações a partir da data inicial do modelo e do intervalo de saída dos diagnósticos, substituindo a dimensão temporal indexada do MPAS. Em seguida, as variáveis de precipitação acumulada RAINC e RAINNC foram desacumuladas ao longo do tempo, permitindo o cálculo da precipitação correspondente a cada intervalo de saída. As componentes convectiva e não convectiva foram então somadas para a obtenção da precipitação total por passo temporal, a qual foi armazenada em formato NetCDF. Por fim, esses dados foram agregados temporalmente para a escala diária, resultando em campos de precipitação diária total utilizados para criar as análises discutidas nos resultados e discussões.
 
@@ -1058,7 +1082,7 @@ De forma geral, para o primeiro dia do evento, o BRAMS apresentou o melhor desem
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f9b7c4f5cfc6185c9981599ade630f36c1e49642.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 28/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 28/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-30}
 \end{figure}
 
@@ -1077,7 +1101,7 @@ De forma geral, para 29 de abril, o MPAS 60$\times$3 km apresentou o melhor dese
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/22d3f965472469fbb770da146e0b0411db44204e.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 29/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 29/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-31}
 \end{figure}
 
@@ -1094,7 +1118,7 @@ Sendo assim, para 30 de abril, o principal erro comum aos modelos foi o deslocam
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/ac18f7aee57e4b176eaa99fe600c395b919dd664.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 30/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 30/04/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-32}
 \end{figure}
 
@@ -1111,7 +1135,7 @@ De forma geral, o principal erro dos modelos neste dia foi o deslocamento para s
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/3376667566986f4f3dce0cf578ad584c26468f82.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 01/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 01/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-33}
 \end{figure}
 
@@ -1128,11 +1152,11 @@ De forma geral, para 02 de maio, o MPAS 60$\times$3 km foi o modelo que melhor r
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/fc79dc2a54fef1cf42ec2eff43eead94660d1e14.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 02/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 02/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-34}
 \end{figure}
 
-No acumulado entre 28 de abril e 02 de maio de 2024, o MERGE apresentou precipitação muito elevada sobre grande parte do centro-norte e nordeste do Rio Grande do Sul, com acumulados superiores a 300 mm e alguns focos adicionais no norte e leste do estado. Esses valores são coerentes com a validação apresentada na Seção 4.2, tanto em relação ao observado nas estações quanto aos impactos registrados durante o evento (apresentados na seção 1.3), o que sugere boa aderência do campo do MERGE ao comportamento geral da precipitação no período.
+No acumulado entre 28 de abril e 02 de maio de 2024, o MERGE apresentou precipitação muito elevada sobre grande parte do centro-norte e nordeste do Rio Grande do Sul, com acumulados superiores a 300 mm e alguns focos adicionais no norte e leste do estado. Esses valores são coerentes com a validação apresentada na Seção 6.1, tanto em relação ao observado nas estações quanto aos impactos registrados durante o evento (apresentados na seção 2.2), o que sugere boa aderência do campo do MERGE ao comportamento geral da precipitação no período.
 
 Em comparação com esse padrão, nenhum dos modelos conseguiu representar adequadamente a distribuição espacial da área com acumulados superiores a 300 mm, sendo que a maior parte deles sequer atingiu essa magnitude. Apenas o BRAMS 8 km e o MPAS 60x3 km apresentaram acumulados dessa ordem. O BRAMS foi o que simulou a maior área com precipitação extrema, mas a deslocou excessivamente para sudoeste, além de subestimar justamente os acumulados nas regiões mais afetadas. Nesse sentido, embora tenha representado melhor a magnitude máxima, apresentou erro espacial mais pronunciado.
 
@@ -1145,7 +1169,7 @@ O ETA 8 km apresentou o pior desempenho entre os modelos, com subestimativa not�
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f35c70cb0501193885a8e6c2cb601b9d951248c0.png}
-\caption{\textcolor{purple}{Precipitação acumulada observada pelo MERGE e prevista pelos modelos entre 28/04/2024 e 02/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Precipitação acumulada observada pelo MERGE e prevista pelos modelos entre 28/04/2024 e 02/05/2024, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-35}
 \end{figure}
 
@@ -1172,7 +1196,7 @@ De forma geral, para 29 de abril, o MPAS 60$\times$15 km apresentou o melhor des
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/5c05e6500f8caf8b892c0255bec160fcbcc66569.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 29/04/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 29/04/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-36}
 \end{figure}
 
@@ -1189,7 +1213,7 @@ De forma geral, para 30 de abril, o principal erro das simulações com CI em 29
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/bbbe35dec7e45050551af35c8f727861e7af4f80.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 30/04/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 30/04/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-37}
 \end{figure}
 
@@ -1206,7 +1230,7 @@ Sendo assim, para 01 de maio, o BRAMS 8 km foi o modelo com melhor desempenho re
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/47fcf379f19d1daa757950cdc8177cac696f9055.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 01/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 01/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-38}
 \end{figure}
 
@@ -1223,7 +1247,7 @@ O BRAMS 8 km apresentou algumas faixas menores com acumulados entre aproximadame
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/7bbb11ba544605c13b63010ab30a05fb25d6a3a4.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 02/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 02/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-39}
 \end{figure}
 
@@ -1238,11 +1262,11 @@ De forma geral, para 03 de maio, o principal erro das simulações foi a persist
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/41cc23ad160ae2a6e40044e6f20f97124ed7811f.png}
-\caption{\textcolor{purple}{Precipitação diária observada pelo MERGE e prevista pelos modelos em 03/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação diária observada pelo MERGE e prevista pelos modelos em 03/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-40}
 \end{figure}
 
-No acumulado total do evento, o MERGE apresentou precipitação muito elevada em grande parte do centro-norte e nordeste do Rio Grande do Sul, com áreas superiores a 300 mm e alguns focos adicionais no norte e leste do estado. Como discutido na Seção 4.2, esses acumulados são coerentes com o observado nas estações durante o evento e também com os impactos registrados nas regiões mais afetadas, especialmente na região hidrográfica do Guaíba, já apresentada na Seção 1.3.
+No acumulado total do evento, o MERGE apresentou precipitação muito elevada em grande parte do centro-norte e nordeste do Rio Grande do Sul, com áreas superiores a 300 mm e alguns focos adicionais no norte e leste do estado. Como discutido na Seção 6.1, esses acumulados são coerentes com o observado nas estações durante o evento e também com os impactos registrados nas regiões mais afetadas, especialmente na região hidrográfica do Guaíba, já apresentada na Seção 2.2.
 
 Em comparação com esse padrão, nenhum dos modelos conseguiu representar adequadamente a distribuição espacial da área com acumulados superiores a 300 mm, sendo que a maior parte deles sequer atingiu essa magnitude. Quando comparada à simulação com condição inicial em 28 de abril, a mudança mais evidente no acumulado total ocorreu principalmente no MPAS 60$\times$3 km, no MPAS 60$\times$60 km e no BRAMS 8 km. No caso do MPAS 60$\times$3 km, houve redução dos acumulados máximos e subestimativa mais acentuada justamente nas áreas mais afetadas, o que, em conjunto com as análises diárias, indica piora no desempenho geral do modelo em relação à CI anterior.
 
@@ -1255,58 +1279,58 @@ De forma geral, para o acumulado total do evento na simulação com CI em 29 de 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/7fe9b5b837ea0a7445b3a158a1d7f57be42d9739.png}
-\caption{\textcolor{purple}{Precipitação acumulada observada pelo MERGE e prevista pelos modelos entre 29/04/2024 e 03/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}}
+\caption{Precipitação acumulada observada pelo MERGE e prevista pelos modelos entre 29/04/2024 e 03/05/2024, para o experimento inicializado em 29/04/2024. Fonte: Autor.}
 \label{fig:figura-41}
 \end{figure}
 
-Deste modo, a mudança da condição inicial de 28 para 29 de abril não resultou em melhora generalizada das previsões (como era de se esperar, dado a maior proximidade temporal com os maiores acumulados). Pelo contrário, a maior parte dos modelos apresentou pior representação dos máximos acumulados, com exceção do BRAMS, que melhorou em termos de abrangência e intensidade relativa, embora ainda com erro espacial importante.
+Deste modo, a mudança da condição inicial de 28 para 29 de abril não resultou em melhora generalizada das previsões (embora se pudesse esperar melhora pela maior proximidade temporal com os maiores acumulados). Pelo contrário, a maior parte dos modelos apresentou pior representação dos máximos acumulados, com exceção do BRAMS, que melhorou em termos de abrangência e intensidade relativa, embora ainda com erro espacial importante.
 
 Essa piora nos resultados, associada ao fato de que os maiores acumulados do evento ocorreram entre 28/04 e 02/05, indica que a simulação com condição inicial em 28 de abril apresentou melhor representação geral do evento. Sendo assim, para o restante deste trabalho, essa simulação será adotada como padrão, e todas as análises subsequentes serão realizadas a partir dela.
 
-\subsection{Análise por Fraction Skill Score}
+\subsection{Análise por Fractions Skill Score}
 \label{sec:fss-resultados}
 
 Aplicando o procedimento descrito na Seção~\ref{sec:procedimentos-avaliacao}, o FSS foi calculado para o acumulado total do evento, considerando diferentes limiares de precipitação e escalas espaciais de vizinhança. A análise a seguir apresenta os resultados obtidos para cada limiar, de forma a avaliar como a habilidade espacial dos modelos varia conforme a intensidade da precipitação acumulada e a tolerância espacial considerada.
 
-Para o limiar de 100 mm no acumulado do evento, observa-se que todos os modelos, com exceção do ETA 8 km, apresentaram algum grau de habilidade espacial, com aumento sistemático do FSS à medida que a escala espacial da janela aumenta \textcolor{green}{(Figura~\ref*{fig:figura-42})}. O MPAS 60$\times$60 km apresentou os maiores valores em todas as escalas, partindo de aproximadamente 0,67 em 25 km e atingindo valores próximos de 0,84 em 200 km. Esse comportamento indica boa correspondência espacial para a área mais ampla de precipitação acumulada acima de 100 mm, ainda que essa habilidade esteja associada a um campo mais suavizado. Em seguida, aparecem o MPAS 60$\times$15 km e o MPAS 60$\times$3 km, com valores bastante próximos entre si, ambos superiores a 0,5 já na menor escala analisada. O BRAMS 8 km apresentou desempenho intermediário, enquanto o ETA 8 km manteve os menores valores de FSS, permanecendo abaixo de 0,4 mesmo na escala de 200 km.
+Para o limiar de 100 mm no acumulado do evento, observa-se que todos os modelos, com exceção do ETA 8 km, apresentaram algum grau de habilidade espacial, com aumento sistemático do FSS à medida que a escala espacial da janela aumenta (Figura~\ref*{fig:figura-42}). O MPAS 60$\times$60 km apresentou os maiores valores em todas as escalas, partindo de aproximadamente 0,67 em 25 km e atingindo valores próximos de 0,84 em 200 km. Esse comportamento indica boa correspondência espacial para a área mais ampla de precipitação acumulada acima de 100 mm, ainda que essa habilidade esteja associada a um campo mais suavizado. Em seguida, aparecem o MPAS 60$\times$15 km e o MPAS 60$\times$3 km, com valores bastante próximos entre si, ambos superiores a 0,5 já na menor escala analisada. O BRAMS 8 km apresentou desempenho intermediário, enquanto o ETA 8 km manteve os menores valores de FSS, permanecendo abaixo de 0,4 mesmo na escala de 200 km.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/bdf300abe42e7e743a374e1b736c7799b2a0b1b1.png}
-\caption{\textcolor{purple}{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 100 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 100 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-42}
 \end{figure}
 
-Esse resultado mostra que, para limiares mais baixos, a melhor pontuação não necessariamente corresponde ao modelo com melhor representação dos máximos acumulados. O desempenho superior do MPAS 60$\times$60 km na \textcolor{green}{Figura~\ref*{fig:figura-42}} está provavelmente associado à maior abrangência e suavização do campo de precipitação, o que favorece a sobreposição espacial com áreas extensas de chuva acumulada acima de 100 mm. Esse padrão é coerente com a análise qualitativa, na qual as configurações mais grosseiras do MPAS representaram parcialmente a distribuição geral da precipitação, embora com perda dos núcleos mais intensos. Portanto, nesse limiar, o FSS favorece a capacidade de reproduzir a extensão espacial da chuva acumulada, mais do que a representação dos extremos.
+Esse resultado mostra que, para limiares mais baixos, a melhor pontuação não necessariamente corresponde ao modelo com melhor representação dos máximos acumulados. O desempenho superior do MPAS 60$\times$60 km na Figura~\ref*{fig:figura-42} está provavelmente associado à maior abrangência e suavização do campo de precipitação, o que favorece a sobreposição espacial com áreas extensas de chuva acumulada acima de 100 mm. Esse padrão é coerente com a análise qualitativa, na qual as configurações mais grosseiras do MPAS representaram parcialmente a distribuição geral da precipitação, embora com perda dos núcleos mais intensos. Portanto, nesse limiar, o FSS favorece a capacidade de reproduzir a extensão espacial da chuva acumulada, mais do que a representação dos extremos.
 
-Quando o limiar é elevado para 150 mm, o desempenho dos modelos se altera de forma clara \textcolor{green}{(Figura~\ref*{fig:figura-43})}. O MPAS 60$\times$3 km passa a apresentar os maiores valores de FSS em todas as escalas, com crescimento de aproximadamente 0,36 em 25 km para cerca de 0,64 em 200 km. Além disso, é o único modelo que ultrapassa o valor de 0,5, o que ocorre apenas a partir da escala de 150 km. Esse comportamento indica que, embora o MPAS 60x3 km tenha apresentado maior capacidade de representar espacialmente áreas de precipitação intermediária em relação aos outros modelos, ainda foi necessária grande tolerância espacial. Evidenciando assim a dificuldade de previsão do evento analisado.
+Quando o limiar é elevado para 150 mm, o desempenho dos modelos se altera de forma clara (Figura~\ref*{fig:figura-43}). O MPAS 60$\times$3 km passa a apresentar os maiores valores de FSS em todas as escalas, com crescimento de aproximadamente 0,36 em 25 km para cerca de 0,64 em 200 km. Além disso, é o único modelo que ultrapassa o valor de 0,5, o que ocorre apenas a partir da escala de 150 km. Esse comportamento indica que, embora o MPAS 60x3 km tenha apresentado maior capacidade de representar espacialmente áreas de precipitação intermediária em relação aos outros modelos, ainda foi necessária grande tolerância espacial. Desta forma, evidenciando a dificuldade de previsão do evento analisado.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/f25db557cb6d8f4cfad42078c11e748f72f2962a.png}
-\caption{\textcolor{purple}{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 150 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 150 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-43}
 \end{figure}
 
-Ainda na \textcolor{green}{Figura~\ref*{fig:figura-43}}, o BRAMS 8 km e o MPAS 60$\times$15 km apresentaram desempenho intermediário, com valores crescentes em função da escala, mas sem atingir FSS superior a 0,5. O MPAS 60$\times$60 km, que havia apresentado o melhor desempenho para 100 mm, perde habilidade relativa quando o limiar é elevado para 150 mm, reforçando a limitação dessa configuração na representação até mesmo de acumulados intermediários. O ETA 8 km, por sua vez, apresentou valores praticamente nulos em pequenas e médias escalas, com apenas leve aumento em 200 km, confirmando a forte subestimativa já indicada pela análise qualitativa das previsões brutas.
+Ainda na Figura~\ref*{fig:figura-43}, o BRAMS 8 km e o MPAS 60$\times$15 km apresentaram desempenho intermediário, com valores crescentes em função da escala, mas sem atingir FSS superior a 0,5. O MPAS 60$\times$60 km, que havia apresentado o melhor desempenho para 100 mm, perde habilidade relativa quando o limiar é elevado para 150 mm, reforçando a limitação dessa configuração na representação até mesmo de acumulados intermediários. O ETA 8 km, por sua vez, apresentou valores praticamente nulos em pequenas e médias escalas, com apenas leve aumento em 200 km, confirmando a forte subestimativa já indicada pela análise qualitativa das previsões brutas.
 
-Para o limiar de 200 mm, a separação entre os modelos e também a perda de desempenho geral tornam-se ainda mais evidentes \textcolor{green}{(Figura~\ref*{fig:figura-44})}. O MPAS 60$\times$3 km mantém os maiores valores de FSS nas escalas de 25 a 150 km, variando de aproximadamente 0,21 a 0,35. O BRAMS 8 km apresenta valores menores nas escalas iniciais, mas aumenta progressivamente com a escala e se aproxima do MPAS 60$\times$3 km em 200 km, quando ambos atingem valores próximos de 0,35. Esse comportamento sugere que o BRAMS representou parte dos acumulados elevados, mas com maior erro de posicionamento, de modo que sua habilidade só se torna comparável à do MPAS 60$\times$3 km com uma grande tolerância espacial.
+Para o limiar de 200 mm, a separação entre os modelos e também a perda de desempenho geral tornam-se ainda mais evidentes (Figura~\ref*{fig:figura-44}). O MPAS 60$\times$3 km mantém os maiores valores de FSS nas escalas de 25 a 150 km, variando de aproximadamente 0,21 a 0,35. O BRAMS 8 km apresenta valores menores nas escalas iniciais, mas aumenta progressivamente com a escala e se aproxima do MPAS 60$\times$3 km em 200 km, quando ambos atingem valores próximos de 0,35. Esse comportamento sugere que o BRAMS representou parte dos acumulados elevados, mas com maior erro de posicionamento, de modo que sua habilidade só se torna comparável à do MPAS 60$\times$3 km com uma grande tolerância espacial.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/0cda3e2ff6592b947b0398f19f089a4f314b95c8.png}
-\caption{\textcolor{purple}{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 200 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 200 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-44}
 \end{figure}
 
 Os demais modelos apresentaram FSS próximo de zero para o limiar de 200 mm. O MPAS 60$\times$15 km manteve apenas valores residuais, enquanto o MPAS 60$\times$60 km e o ETA 8 km praticamente não apresentaram correspondência espacial para essa classe de precipitação. Esse resultado é consistente com a análise qualitativa do acumulado do evento, na qual esses modelos subestimaram de forma acentuada os núcleos extremos e não representaram adequadamente \ul{as} áreas com maiores volumes acumulados. Mesmo no caso do MPAS 60$\times$3 km, que apresentou o melhor desempenho relativo, os valores de FSS permaneceram consideravelmente baixos, indicando que a representação dos acumulados acima de 200 mm foi bastante deficitária.
 
-Como pode ser observado na \textcolor{green}{figura~\ref*{fig:figura-45}}, a habilidade dos modelos de representar acumulados maiores do que 300mm foi praticamente nula. Apenas o BRAMS 8 km apresentou valores de FSS diferentes de zero, e somente a partir de escalas mais amplas, atingindo quase 0.2 em 200 km. Os demais modelos permaneceram com FSS nulo em todas as escalas analisadas. Esse resultado indica que, embora alguns modelos tenham representado chuva intensa em limiares intermediários, nenhum deles conseguiu reproduzir de forma satisfatória a estrutura espacial dos acumulados mais extremos observados pelo MERGE.
+Como pode ser observado na figura~\ref*{fig:figura-45}, a habilidade dos modelos de representar acumulados maiores do que 300 mm foi praticamente nula. Apenas o BRAMS 8 km apresentou valores de FSS diferentes de zero, e somente a partir de escalas mais amplas, atingindo quase 0,2 em 200 km. Os demais modelos permaneceram com FSS nulo em todas as escalas analisadas. Esse resultado indica que, embora alguns modelos tenham representado chuva intensa em limiares intermediários, nenhum deles conseguiu reproduzir de forma satisfatória a estrutura espacial dos acumulados mais extremos observados pelo MERGE.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/5ac725cbe99c52fb6c49d5532768debe8832d59d.png}
-\caption{\textcolor{purple}{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 300 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}}
+\caption{Fractions Skill Score (FSS) do acumulado total do evento para o limiar de 300 mm, considerando diferentes escalas espaciais de vizinhança, para o experimento inicializado em 28/04/2024. Fonte: Autor.}
 \label{fig:figura-45}
 \end{figure}
 
@@ -1314,31 +1338,31 @@ De forma geral, os resultados do FSS reforçam a interpretação obtida na anál
 
 Sendo assim, a principal limitação das simulações não esteve apenas na subestimativa dos máximos, mas também no posicionamento inadequado das faixas de maior precipitação. O MPAS 60$\times$60 km apresentou melhor desempenho relativo para a área mais abrangente de chuva acumulada, enquanto o MPAS 60$\times$3 km foi superior nos limiares intermediários de 150 e 200 mm. No entanto, nenhum modelo representou adequadamente os acumulados extremos superiores a 300 mm, indicando baixa habilidade espacial justamente na faixa de precipitação mais relevante para a caracterização do evento.
 
-\section{Análise dos acumulados por bacia.}
+\section{Análise dos acumulados por bacia}
 
-Como já citado durante a descrição do evento, no tópico 1.3, a região de estudo não foi igualmente afetada espacialmente, tendo sido mais afetada a região a Região Hidrográfica do Guaíba, como fica evidente pelo mapa de municípios que decretaram estado de calamidade pública durante o evento, apresentado na \textcolor{green}{figura~\ref*{fig:figura-46}}.
+Como já citado durante a descrição do evento, no tópico 2.2, a região de estudo não foi igualmente afetada espacialmente, tendo sido mais afetada a região Hidrográfica do Guaíba, como fica evidente pelo mapa de municípios que decretaram estado de calamidade pública durante o evento, apresentado na figura~\ref*{fig:figura-46}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/3a1ce9beabbbbafc420f9b346c292655dcf1e7c1.png}
-\caption{\textcolor{purple}{Regiões Hidrográficas do Rio Grande do Sul e municípios que decretaram estado de calamidade pública até 30/05/2024. Fonte: Autor.}}
+\caption{Regiões Hidrográficas do Rio Grande do Sul e municípios que decretaram estado de calamidade pública até 30/05/2024. Fonte: Autor.}
 \label{fig:figura-46}
 \end{figure}
 
 Desta forma, é válida uma análise mais focada nas regiões mais afetadas.
 
-Para isso será analisada a diferença entre a precipitação acumulada média por bacia do produto de precipitação de referência (o MERGE) em comparação com cada um dos modelos, como mostrado na \textcolor{green}{figura~\ref*{fig:figura-47}}.
+Para isso analisou-se a diferença entre a precipitação acumulada média por bacia do produto de precipitação de referência (o MERGE) em comparação com cada um dos modelos, como mostrado na figura~\ref*{fig:figura-47}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figuras/fc75db8736987bb98b0d085b37a661cb122765cf.png}
-\caption{\textcolor{purple}{Diferença da precipitação acumulada média por bacia hidrográfica entre cada modelo e o MERGE, para o acumulado do evento entre 28/04/2024 e 02/05/2024. Fonte: Autor.}}
+\caption{Diferença da precipitação acumulada média por bacia hidrográfica entre cada modelo e o MERGE, para o acumulado do evento entre 28/04/2024 e 02/05/2024. Fonte: Autor.}
 \label{fig:figura-47}
 \end{figure}
 
 A análise da diferença da precipitação acumulada média por bacia indica que todos os modelos subestimaram consideravelmente o acumulado total do evento entre 28/04 e 02/05 nas bacias mais afetadas. Entre eles, o MPAS 60$\times$3 km apresentou as menores diferenças negativas, seguido pelo MPAS 60$\times$15 km, MPAS 60$\times$60 km, BRAMS 8 km e ETA 8 km. Assim, embora nenhum modelo tenha reproduzido adequadamente os acumulados observados nessas regiões, as configurações do MPAS apresentaram menor erro médio nas bacias de maior impacto.
 
-Esse resultado também evidencia uma limitação importante de análises fortemente dependentes da localização espacial, como comparações bacia a bacia ou métricas ponto a ponto. Como discutido na seção 5.1.3, modelos que representam parcialmente a estrutura geral da precipitação e seus acumulados, mas apresentam deslocamento espacial relevante, tendem a ser mais penalizados por esse tipo de avaliação. Esse é o caso do BRAMS 8 km, que nas análises qualitativas apresentou desempenho relativamente melhor, ficando em geral atrás apenas do MPAS 60$\times$3 km, mas que, nesta análise por bacia, teve seu desempenho reduzido devido ao deslocamento da faixa principal de precipitação. Enquanto modelos que apresentaram resultados, no geral, piores, como o MPAS 60x60 que suavizou excessivamente os máximos, acabaram sendo beneficiados por manterem valores mais suaves em todo o domínio.
+Esse resultado também evidencia uma limitação importante de análises fortemente dependentes da localização espacial, como comparações bacia a bacia ou métricas ponto a ponto. Como discutido na seção 7.1.3, modelos que representam parcialmente a estrutura geral da precipitação e seus acumulados, mas apresentam deslocamento espacial relevante, tendem a ser mais penalizados por esse tipo de avaliação. Esse é o caso do BRAMS 8 km, que nas análises qualitativas apresentou desempenho relativamente melhor, ficando em geral atrás apenas do MPAS 60$\times$3 km, mas que, nesta análise por bacia, teve seu desempenho reduzido devido ao deslocamento da faixa principal de precipitação. Enquanto modelos que apresentaram resultados, no geral, piores, como o MPAS 60x60 que suavizou excessivamente os máximos, acabaram sendo beneficiados por manterem valores mais suaves em todo o domínio.
 
 Sendo assim, a diferença entre os resultados qualitativos e a análise por bacia sugere que o desempenho dos modelos deve ser interpretado considerando conjuntamente intensidade, localização e estrutura espacial e que, embora a análise por bacia seja útil para quantificar o erro nas regiões mais impactadas, não deve ser interpretada isoladamente.
 
@@ -1350,15 +1374,15 @@ De forma geral, os resultados indicam que nenhum dos modelos foi capaz de repres
 
 Entre as simulações com condição inicial em 28 de abril, o MPAS 60$\times$3 km apresentou o melhor desempenho qualitativo geral. A configuração de maior resolução representou melhor a estrutura espacial e a intensidade relativa das faixas mais intensas de precipitação, principalmente nos dias finais do evento. Apesar disso, o modelo ainda apresentou erro espacial importante, com deslocamento sistemático da banda principal para sudoeste, além de subestimar a extensão da área com acumulados extremos no total do evento. As configurações MPAS 60$\times$15 km e MPAS 60$\times$60 km representaram bem o padrão geral de distribuição da precipitação, mas apresentaram maior suavização e menor capacidade de reproduzir os núcleos de maior intensidade.
 
-A comparação entre as condições iniciais mostrou que a inicialização mais próxima ao pico do evento não resultou em melhora generalizada das previsões. Pelo contrário, a simulação com condição inicial em 29 de abril apresentou piora no desempenho geral de quase todos os modelos, especialmente no MPAS 60$\times$3 km e no MPAS 60$\times$15 km, que reduziram seus acumulados máximos e subestimaram de forma mais intensa a precipitação nas áreas mais impactadas. O BRAMS foi o único modelo que apresentou melhora nessa condição inicial, com maior área de precipitação intensa e melhor distribuição dos acumulados menores, embora tenha mantido seu principal erro, o deslocamento da faixa principal para sudoeste e concentração exacerbada da faixa precipitante. Sendo assim e, considerando a evolução diária, o acumulado total do evento e a performance geral dos modelos analisados, a simulação com condição inicial em 28 de abril apresentou desempenho mais consistente e foi adotada como simulação padrão para as análises subsequentes.
+A comparação entre as condições iniciais mostrou que a inicialização mais próxima ao pico do evento não resultou em melhora generalizada das previsões. Pelo contrário, a simulação com condição inicial em 29 de abril apresentou piora no desempenho geral de quase todos os modelos, especialmente no MPAS 60$\times$3 km e no MPAS 60$\times$15 km, que reduziram seus acumulados máximos e subestimaram de forma mais intensa a precipitação nas áreas mais impactadas. O BRAMS foi o único modelo que apresentou melhora nessa condição inicial, com maior área de precipitação intensa e melhor distribuição dos acumulados menores, embora tenha mantido seu principal erro, o deslocamento da faixa principal para sudoeste e concentração exacerbada da faixa precipitante. Sendo assim, considerando a evolução diária, o acumulado total do evento e a performance geral dos modelos analisados, a simulação com condição inicial em 28 de abril apresentou desempenho mais consistente e foi adotada como simulação padrão para as análises subsequentes.
 
 As análises quantitativas reforçaram a necessidade de interpretar os resultados a partir de múltiplas métricas. A avaliação por bacia indicou subestimativa generalizada dos acumulados nas regiões mais afetadas, com menor diferença média negativa no MPAS 60$\times$3 km. No entanto, também evidenciou que métricas fortemente dependentes da localização espacial penalizam de forma mais intensa modelos que, embora representem acumulados elevados, posicionam incorretamente a faixa principal de precipitação. Esse comportamento foi particularmente evidente no BRAMS, que apresentou desempenho melhor nas outras análises em comparação com os outros modelos, mas foi fortemente penalizado na comparação por bacias devido ao deslocamento espacial dos máximos.
 
-Já o fraction skill score, mostrou que a interpretação do desempenho dos modelos depende fortemente do limiar de precipitação e da escala espacial considerada. Para limiares mais baixos, modelos com campos mais suavizados, como o MPAS 60$\times$60 km, podem apresentar maior habilidade espacial por representarem melhor a abrangência geral da chuva acumulada, embora representem de maneira menos fiel a distribuição espacial dos valores mais intensos. Para limiares mais altos, associados aos núcleos médios e mais intensos do evento, o MPAS 60$\times$3 km apresentou desempenho superior, ainda que necessitando de maior tolerância espacial para atingir valores considerados hábeis. Esse resultado reforça que a maior resolução horizontal e a melhor representação dos processos convectivos contribuíram para uma melhor representação relativa da precipitação intensa, mas não foram suficientes para eliminar erros relevantes de posicionamento e magnitude.
+Já o fractions skill score mostrou que a interpretação do desempenho dos modelos depende fortemente do limiar de precipitação e da escala espacial considerada. Para limiares mais baixos, modelos com campos mais suavizados, como o MPAS 60$\times$60 km, podem apresentar maior habilidade espacial por representarem melhor a abrangência geral da chuva acumulada, embora representem de maneira menos fiel a distribuição espacial dos valores mais intensos. Para limiares mais altos, associados aos núcleos médios e mais intensos do evento, o MPAS 60$\times$3 km apresentou desempenho superior, ainda que necessitando de maior tolerância espacial para atingir valores considerados hábeis. Esse resultado reforça que a maior resolução horizontal e a melhor representação dos processos convectivos podem ter contribuído para uma melhor representação relativa da precipitação intensa, mas não foram suficientes para eliminar erros relevantes de posicionamento e magnitude.
 
 Dessa forma, os resultados indicam que o MPAS 60$\times$3 km apresentou o melhor desempenho geral para a simulação analisada, especialmente na representação da distribuição espacial da precipitação. No entanto, mesmo essa configuração apresentou limitações importantes para a previsão operacional de um evento extremo dessa magnitude, principalmente pela dificuldade em posicionar corretamente os máximos acumulados nas regiões mais afetadas e representar corretamente os valores mais extremos. O ETA 8 km apresentou o pior desempenho geral, com forte subestimativa dos acumulados e baixa aderência espacial ao observado, enquanto o BRAMS 8 km demonstrou capacidade de gerar acumulados elevados, mas com erros relevantes de concentração e deslocamento espacial.
 
-Apesar dessas limitações, as configurações do MPAS, principalmente a de 60$\times$3 km, apresentaram, em todas as métricas analisadas, desempenho comparável ou superior ao dos modelos já amplamente utilizados para previsão de curto prazo no Brasil (o BRAMS e o ETA). Esse resultado é relevante especialmente porque as simulações do MPAS foram realizadas com parametrizações padrão, sem calibração específica, alterações físicas ou adaptações direcionadas ao território brasileiro. Sendo assim, os resultados sugerem que o MPAS apresenta potencial importante para aplicações futuras em previsão de curto prazo e em estudos de eventos extremos no Brasil, ainda que sua utilização operacional dependa de avaliações adicionais para verificar se o bom desempenho relativo se mantém em diferentes cenários.
+Apesar dessas limitações, as configurações do MPAS, principalmente a de 60$\times$3 km, apresentaram, considerando o conjunto das avaliações, desempenho comparável ou superior ao dos modelos já amplamente utilizados para previsão de curto prazo no Brasil (o BRAMS e o ETA). Esse resultado é relevante especialmente porque as simulações do MPAS foram realizadas com parametrizações padrão, sem calibração específica, alterações físicas ou adaptações direcionadas ao território brasileiro. Sendo assim, os resultados sugerem que o MPAS apresenta potencial importante para aplicações futuras em previsão de curto prazo e em estudos de eventos extremos no Brasil, ainda que sua utilização operacional dependa de avaliações adicionais para verificar se o bom desempenho relativo se mantém em diferentes cenários.
 
 Além disso, considerando que o MPAS também pode ser aplicado em previsões sazonais, estudos futuros devem avaliar seu desempenho nessa escala temporal em comparação com os modelos frequentemente utilizados para esse tipo de previsão no Brasil. Essa ampliação permitiria verificar se o desempenho relativo observado neste estudo, focado em previsões de curto prazo, também se mantém em horizontes temporais mais longos, especialmente em aplicações voltadas ao monitoramento climático, planejamento setorial e gestão de risco.
 
@@ -1401,7 +1425,7 @@ Além disso, considerando que o MPAS também pode ser aplicado em previsões saz
 \item
   DEFESA CIVIL DO RIO GRANDE DO SUL. Defesa Civil atualiza balanço das enchentes no RS -- 08/7. Disponível em: \url{https://www.defesacivil.rs.gov.br/defesa-civil-atualiza-balanco-das-enchentes-no-rs-08-7}. Acesso em: 6 fev. 2025.
 \item
-  CONFEDERAÇÃO NACIONAL DO COMÉRCIO DE BENS, SERVIÇOS E TURISMO (CNC). Análise dos impactos econômicos da catástrofe no Rio Grande do Sul e do Plano de Reconstrução. 25 jul. 2024. Disponível em: \url{https://www.cncfakeurl.com.br}. Acesso em: 6 fev. 2025.
+  CONFEDERAÇÃO NACIONAL DO COMÉRCIO DE BENS, SERVIÇOS E TURISMO (CNC). Análise dos impactos econômicos da catástrofe no Rio Grande do Sul e do Plano de Reconstrução. 25 jul. 2024. Disponível em: \url{https://portal-bucket.azureedge.net/wp-content/2024/07/Analise-Tragedia-RS.pdf}. Acesso em: 6 fev. 2025.
 \item
   ROZANTE, J. R. et al. Combining TRMM and Surface Observations of Precipitation: Technique and Validation over South America. \textbf{Weather and Forecasting}, v. 25, n. 3, p. 885--894, jun. 2010.
 \item
@@ -1409,7 +1433,7 @@ Além disso, considerando que o MPAS também pode ser aplicado em previsões saz
 \item
   ROZANTE, J. R.; ROZANTE, G. IMERG V07B and V06B: A Comparative Study of Precipitation Estimates Across South America with a Detailed Evaluation of Brazilian Rainfall Patterns. \textbf{Remote Sensing}, v. 16, n. 24, p. 4722, dez. 2024.
 \item
-  REIS, A. A. et al. Assessing two precipitation data sources at basins of \ldots{} Revista Brasileira de Recursos Hídricos, Porto Alegre, v. 25, e14, 2020. Disponível em: \url{https://www.scielo.br/j/rbrh/a/Q6crdW67brTqgVxG3GQqZWL/}. Acesso em: 09-10-2025. \href{https://www.scielo.br/j/rbrh/a/Q6crdW67brTqgVxG3GQqZWL/?format=pdf&lang=en&utm_source=chatgpt.com}{scielo.br}
+  REIS, A. A. et al. Assessing two precipitation data sources at basins of \ldots{} Revista Brasileira de Recursos Hídricos, Porto Alegre, v. 25, e14, 2020. Disponível em: \url{https://www.scielo.br/j/rbrh/a/Q6crdW67brTqgVxG3GQqZWL/}. Acesso em: 09-10-2025. \href{https://www.scielo.br/j/rbrh/a/Q6crdW67brTqgVxG3GQqZWL/?format=pdf}
 \item
   MA, Zhanshan et al. Spin-up characteristics with three types of initial fields and the restart effects on forecast accuracy in the GRAPES global forecast system. Geoscientific Model Development, {[}s.l., v. 14, n. 1, p. 205--221, 12 jan. 2021. DOI: 10.5194/gmd-14-205-2021.
 \item
@@ -1433,7 +1457,7 @@ Além disso, considerando que o MPAS também pode ser aplicado em previsões saz
 \item
   NATIONAL CENTER FOR ATMOSPHERIC RESEARCH -- NCAR. \emph{WRF Preprocessing System (WPS): user's guide}. Mesoscale and Microscale Meteorology Laboratory (MMM). Disponível em: \url{https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/wps.html}. Acesso em: 14 Fev. 2025.
 \item
-  NCAR \textbf{MPAS Tutorial --- Practice Session Guide}. \emph{MPAS-Atmosphere Tutorial}, University Corporation for Atmospheric Research (UCAR) / Mesoscale \& Microscale Meteorology Division. Disponível em: \url{https://www2.mmm.ucar.edu/projects/mpas/tutorial/StAndrews2025/}. Acesso em: 09 10 2025. \href{https://www2.mmm.ucar.edu/projects/mpas/tutorial/StAndrews2025/?utm_source=chatgpt.com}{www2.mmm.ucar.edu}
+  NCAR \textbf{MPAS Tutorial --- Practice Session Guide}. \emph{MPAS-Atmosphere Tutorial}, University Corporation for Atmospheric Research (UCAR) / Mesoscale \& Microscale Meteorology Division. Disponível em: \url{https://www2.mmm.ucar.edu/projects/mpas/tutorial/StAndrews2025/}. Acesso em: 09 10 2025. \href{https://www2.mmm.ucar.edu/projects/mpas/tutorial/StAndrews2025/}{www2.mmm.ucar.edu}
 \item
   UCAR -- UNIVERSITY CORPORATION FOR ATMOSPHERIC RESEARCH. \emph{MPAS-Atmosphere User's Guide}, version 8.2.0. Boulder, CO: National Center for Atmospheric Research, 2023. Disponível em: \url{https://www2.mmm.ucar.edu/projects/mpas/mpas_atmosphere_users_guide_8.2.0.pdf}. Acesso em: 21 11 2025.
 \item
@@ -1634,6 +1658,8 @@ Além disso, considerando que o MPAS também pode ser aplicado em previsões saz
   ROSSA, A.; NURMI, P.; EBERT, E. \textbf{Overview of methods for the verification of quantitative precipitation forecasts}. In: MICHAELIDES, S. (ed.). \emph{Precipitation: Advances in Measurement, Estimation and Prediction}. Berlin, Heidelberg: Springer, 2008. p. 419--452. DOI: 10.1007/978-3-540-77655-0\_16.
 \item
   MAPBIOMAS. \textbf{Nota técnica: os impactos do evento climático de maio de 2024 sobre a cobertura e o uso da terra no Rio Grande do Sul}. 2024. Disponível em: \url{https://brasil.mapbiomas.org/wp-content/uploads/sites/4/2024/06/NT\_Evento\_climatico\_extremo\_RS\_maio\_2024\_Final.pptx.pdf}. Acesso em: 25 jun. 2025.
+\item
+  ORGANIZAÇÃO METEOROLÓGICA MUNDIAL. \textbf{Atlas of Mortality and Economic Losses from Weather, Climate and Water-related Hazards (1970--2021)}. Genebra: WMO, 2023.
 \end{enumerate}
 
 \end{document}
